@@ -33,6 +33,7 @@
   display: none;
 }
 .head-logo {
+  display: flex;
   flex-direction: row;
   align-content: flex-start;
 }

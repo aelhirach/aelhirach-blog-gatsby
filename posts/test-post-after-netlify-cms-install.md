@@ -3,7 +3,7 @@ tags:
   - graphql
   - gatsby
 published: true
-date: 2020-01-05T13:54:07.809Z
+date: 2020-09-05T13:54:07.809Z
 title: How I built my portfolio with Gatsby and ReactJS
 ---
 
