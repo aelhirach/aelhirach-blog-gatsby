@@ -33,8 +33,8 @@
   display: none;
 }
 .head-logo {
-  font-family: "Raleway";
-  font-size: 1.75rem;
+  flex-direction: row;
+  align-content: flex-start;
 }
 
 small {

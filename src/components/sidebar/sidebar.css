@@ -1,6 +1,6 @@
 .sidebar-main {
     width: 100%;
-    
+
 }
 
 .side-social-links {
@@ -22,10 +22,9 @@
 
 small, h3, p {
     font-family: 'Raleway';
-    
+
 }
 
 .author-bio {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
-

@@ -1,7 +1,7 @@
 "use strict"
 
 module.exports = {
-  url: "https://developer-diary.netlify.com",
+  url: "https://www.aelhirach.me",
   title: "EL HIRACH ABDERRAZZAK Mobile Developer",
   tagline: "I'm an IT Engineer working as Mobile Apps & Games Engineer ! ",
   copyright: "© 2020 EL HIRACH ABDERRAZZAK, All rights reserved",
@@ -14,7 +14,7 @@ module.exports = {
       stackoverflow:
         "https://stackoverflow.com/users/13517039/elhirach-abderrazzak?tab=profile",
       facebook: "https://www.facebook.com/elhirach.abderrazzak",
-      twitter: "https://twitter.com/elhirachRZ",
+      twitter: "https://twitter.com/a_elhirach",
     },
   },
   labels: [
