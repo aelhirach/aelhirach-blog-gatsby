@@ -1,8 +1,14 @@
 ---
-title: 'Misplaced Middleware in Express'
-tags: ["nodejs", "express"]
+tags:
+  - nodejs
+  - express
 published: true
+<<<<<<< HEAD
 date: '2020-03-29'
+=======
+date: 2020-09-04T19:17:48.673Z
+title: Misplaced Middleware in Express new
+>>>>>>> ebe048ff8bff8f4faf12c871116a0947a16dbf9c
 ---
 
 
