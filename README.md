@@ -1,12 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-  Developer Diary - A Gatsby Starter
+  EL HIRACH Abderrazzak Gatsby Blog
 </h1>
 
-*
 ## Authors
-- Will Ward [@rzouka](https://github.com/rzouka)
+- EL HIRACH Abderrazzak [@rzouka](https://github.com/rzouka)
 
 
 ## Contribute
