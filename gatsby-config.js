@@ -19,10 +19,14 @@ module.exports = {
     labels: siteConfig.labels,
   },
   plugins: [
+
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: siteConfig.url,
+        host: "https://www.aelhirach.me",
         //sitemap: 'https://www.example.com/sitemap.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
@@ -35,9 +39,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
