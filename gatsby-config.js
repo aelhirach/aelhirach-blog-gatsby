@@ -4,7 +4,7 @@ const siteConfig = require("./config")
 
 module.exports = {
   siteMetadata: {
-    url: siteConfig.url,
+    siteUrl: "https://aelhirach.me",
     title: siteConfig.title,
     tagline: siteConfig.tagline,
     description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android). He is also interested in Video streaming & TV production technologies, specially the A/V transcoding & professional codecs.  I like also staying up to date about aeronautics digital technologies and crash investigations !`,
@@ -23,6 +23,49 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+            output: `/sitemap.xml`,
+            query: `
+                {
+                site {
+                    siteMetadata {
+                        siteUrl
+                    }
+                }
+                allFile(filter: {extension: {eq: "md"}}) {
+            edges {
+              node {
+                sourceInstanceName
+                modifiedTime
+                relativeDirectory
+              }
+            }
+          }
+                allSitePage {
+                    edges {
+                        node {
+                            path
+                        }
+                    }
+                }
+            }`,
+            serialize: ({ site, allSitePage,allFile }) =>{
+            //iterates over the array inside allSite to generate the the sitemap the markdown items will have lower priority
+            return allSitePage.edges.map(edge=>{
+              const itemPresent= allFile.edges.find(item=>`/${item.node.relativeDirectory}/`===edge.node.path)
+              return {
+                url: site.siteMetadata.siteUrl + edge.node.path,
+                changefreq: itemPresent?`weekly`:`daily`, // if any of the markdown (blog/projects) data present set the frequency to weekly otherwise daily
+                lastmod:itemPresent?itemPresent.node.modifiedTime.split('T')[0]:new Date().toISOString().split('T')[0], // adds the lastmod entry with a date either parsed or today
+                priority:itemPresent?0.6:0.9, //sets the priority based on the markdown(blog/projects) 0.6 if they do, 0.9 otherwise
+              }
+            })
+          }
+        }
+      },
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

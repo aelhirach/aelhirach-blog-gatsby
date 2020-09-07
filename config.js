@@ -1,7 +1,7 @@
 "use strict"
 
 module.exports = {
-  url: "https://www.aelhirach.me",
+  siteUrl: "https://aelhirach.me",
   title: "EL HIRACH ABDERRAZZAK Mobile Developer",
   tagline: "I'm an IT Engineer working as Mobile Apps & Games Engineer ! ",
   copyright: "© 2020 EL HIRACH ABDERRAZZAK, All rights reserved",

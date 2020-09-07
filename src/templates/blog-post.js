@@ -11,8 +11,8 @@ import CustomShareBlock from "../components/CustomShareBlock"
 const BlogPost = (props) => {
   const post = props.data.markdownRemark
   const labels = props.data.site.siteMetadata.labels
-  const siteName = props.data.site.siteMetadata.title 
-  const siteUrl = props.data.site.siteMetadata.url
+  const siteName = props.data.site.siteMetadata.title
+  const siteUrl = props.data.site.siteMetadata.siteUrl
   const url = `${siteUrl}${props.pageContext.slug}`;
   const tags = post.frontmatter.tags
 
@@ -58,13 +58,13 @@ export const query = graphql`
   query($slug: String!) {
       site {
         siteMetadata {
-          url
+          siteUrl
           title
           labels {
               tag
-              tech 
-              name 
-              size 
+              tech
+              name
+              size
               color
           }
         }
