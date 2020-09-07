@@ -7,7 +7,7 @@ module.exports = {
     url: siteConfig.url,
     title: siteConfig.title,
     tagline: siteConfig.tagline,
-    description: `EL HIRACH ABDERRAZZAK blog and Portfolio.`,
+    description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android). He is also interested in Video streaming & TV production technologies, specially the A/V transcoding & professional codecs. `,
     author: siteConfig.author.name,
     contacts: {
       linkedin: siteConfig.author.contacts.linkedin,

@@ -16,6 +16,7 @@
     "gatsby-plugin-netlify-cms": "^4.3.12",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-remark-images": "^3.3.28",
     "gatsby-remark-prismjs": "^3.5.11",
