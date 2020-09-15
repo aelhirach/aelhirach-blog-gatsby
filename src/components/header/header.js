@@ -30,7 +30,7 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
       >
 
         <div className="head-logo ml-4" >
-                <img style={{ marginRight :`10px`, maxWidth: `5vw`, maxHeight: `7vw`, borderRadius: `40%`,boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
+                <img style={{ marginRight :`10px`, maxWidth: `10vw`, maxHeight: `12vw`, borderRadius: `40%`,boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
 
                 <TwitterFollowButton   screenName={'a_elhirach'} />
 
@@ -41,7 +41,7 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
       </div>
       <MobileSocialLinks contacts={contacts} />
       <MobilePageLinks />
-      <MobileBio author={author} />
+      <MobileBio author={author} tagline={tagline} />
     </header>
   )
 }

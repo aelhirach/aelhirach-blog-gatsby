@@ -1,12 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import "./header.css"
 
 const MobilePages = () => {
     return (
-        <div className="mobile-pages-main">
+        <div className="mobile-pages-main" >
             <div className="text-center">
-                <p className="d-inline p-4"><Link to="/"><span className="text-dark">Blog Home</span></Link></p>
-                <p className="d-inline p-4"><Link to="/about"><span className="text-dark">About</span></Link></p>
+                <Link to="/"><span className="linkStyle d-inline p-4">Blog Home</span></Link>
+                <Link to="/about"><span className="linkStyle d-inline p-4">About</span></Link>
+                <a href="mailto:elhirach.abderrazzak@gmail.com?subject=Hello from your website"><span className="linkStyle d-inline p-4">Get in touch</span></a>
+
             </div>
         </div>
     )
