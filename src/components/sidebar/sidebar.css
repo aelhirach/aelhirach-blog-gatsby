@@ -28,3 +28,17 @@ small, h3, p {
 .author-bio {
     font-size: 1.5vw;
 }
+
+.link {
+    color: #26293b;
+    font-weight: bold;
+    font-family: "Raleway";
+    font-size: .95rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: #26293b;
+  margin-right: 20px;
+
+}

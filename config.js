@@ -2,15 +2,15 @@
 
 module.exports = {
   siteUrl: "https://aelhirach.me",
-  title: "EL HIRACH ABDERRAZZAK Mobile Developer",
-  tagline: "I'm an IT Engineer working as Mobile Apps & Games Engineer ! ",
+  title: "EL HIRACH ABDERRAZZAK Mobile Engineer",
+  tagline: "I'm a Mobile Apps Engineer (iOS and Android). I like learning about TV production and aeronautics technologies ",
   copyright: "© 2020 EL HIRACH ABDERRAZZAK, All rights reserved",
   author: {
     name: "EL HIRACH ABDERRAZZAK",
-    bio: "I'm an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android). I'am also interested in Video streaming & TV production technologies, specially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations ! ",
+    bio: "I'm an IT industrial engineer working as Mobile Apps & Games Engineer, originally from Morroco but have been living in the beautiful city of Brussels since 2012.",
     contacts: {
       linkedin: "https://www.linkedin.com/in/abderrazzak-elhirach/",
-      github: "https://github.com/rzouka",
+      github: "https://github.com/aelhirach",
       stackoverflow:
         "https://stackoverflow.com/users/13517039/elhirach-abderrazzak?tab=profile",
       facebook: "https://www.facebook.com/elhirach.abderrazzak",
