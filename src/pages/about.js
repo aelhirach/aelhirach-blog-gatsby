@@ -188,10 +188,7 @@ const AboutPage = (props) => {
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> Good Knowledge of Node.js Frameworks, RESTful APIs and API Communications.
                         </li>
-
                         </ul>
-
-
 
                         <div className="mt-4">
                             <span className="text-success d-inline-block" title="prism">
@@ -213,27 +210,22 @@ const AboutPage = (props) => {
                         <br/>
                         <ul class="list-group">
 
-
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  I use Scrum project management methodology, git version control system and GitKraken Tool
-                        </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  I'm familiar with Teams and Slack channels
+                        </span>  I use Scrum project management methodology, git version control system and GitKraken Tool.
                         </li>
 
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts
+                        </span> I'm familiar with Teams and Slack channels.
                         </li>
-
 
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts
                         </li>
 
+              
 
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
     <AiFillRightCircle size={18} style={{ color: "orange" }} />
@@ -241,7 +233,7 @@ const AboutPage = (props) => {
                         </li>
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I create NoSQL database : PostgreSQL, FireBase and SQLite Database
+                        </span> I create NoSQL database : PostgreSQL, FireBase and SQLite Database.
                         </li>
                         </ul>
                     </div>
