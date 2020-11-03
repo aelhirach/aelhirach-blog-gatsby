@@ -46,7 +46,7 @@ const AboutPage = (props) => {
                             <span className="text-success d-inline-block" title="blazing">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">I build native & cross-platform games & mobile apps from idea to stores using : Swift, Objectif C, React-Native and Unity 3D : </p>
+                            <p className="d-inline-block ml-3 align-top">I build native & cross-platform games & mobile apps from idea to stores using : Swift, Objectif C, React-Native and Unity 3D : </p>
                             <div className="ml-5">
                                   <TechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
                                   <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
@@ -56,44 +56,44 @@ const AboutPage = (props) => {
                         <br/>
                         <ul class="list-group">
 
-                            <li className="d-inline-block ml-3 w-75 align-top">
+                            <li className="d-inline-block ml-3 align-top">
                             <span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
 
                             </span> I'm always up to date with the latest and the greatest technology released by Apple.</li>
-                            <li className="d-inline-block ml-3 w-75 align-top">
+                            <li className="d-inline-block ml-3 align-top">
                             <span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I have three years of professional experience as an iOS developer with Swift and Objective-C. 
                             </li>
 
-                            <li className="d-inline-block ml-3 w-75 align-top">
+                            <li className="d-inline-block ml-3 align-top">
                             <span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I implement security best practices for the mobile applications such as KeyChain, Certificate Pinning etc.
                             </li>
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" >
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" >
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I use design patters like MVC, MVVM, MVP, composition, protocol oriented programming.
                             </li>
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" >
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" >
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I have an excellent knowledge about the SwiftUI Scenes, Views, Modifiers, Stacks, Containers, State management system and Data flow.
                             </li>
 
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I implement modular architecture using dynamic frameworks.
                             </li>
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I have an excellent understanding of UIKit, Core Animation, GCD, Core Data and WatchKit.
                             </li>
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I can implement CI (continuous integration) set up using Xcode Server, Jenkins, Git.
                             </li>
-                            <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
                             </span> I have a good Experience with UI Test automation and XCTest.
                             </li>
@@ -107,20 +107,20 @@ const AboutPage = (props) => {
                         </div>
                           <br/>
                           <ul class="list-group">
-                              <li className="d-inline-block ml-3 w-75 align-top">
+                              <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I use the Expo framework (Managed and bare workflows).</li>
-                              <li className="d-inline-block ml-3 w-75 align-top">
+                              <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I use React Native Debugger & Google Chrome Developpement Tools.
                               </li>
-                              <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" >
+                              <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" >
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I use both Hooks and class component to build React-Native Apps.
                               </li>
-                              <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                              <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I use Atom IDE and Visual Code.
                               </li>
@@ -132,11 +132,11 @@ const AboutPage = (props) => {
                           </div>
                           <br/>
                           <ul class="list-group">
-                              <li className="d-inline-block ml-3 w-75 align-top">
+                              <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I have a good knowledge of Unity, including experience with C# scripting, textures, animation, GUI styles to develop 2D mobile games.</li>
-                              <li className="d-inline-block ml-3 w-75 align-top">
+                              <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
                               </span> I use artificial intelligence (AI) algorithms to make brain puzzles games.
@@ -147,7 +147,7 @@ const AboutPage = (props) => {
                             <span className="text-success d-inline-block" title="tags">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">I develop a general purpose applications using many languages :</p>
+                            <p className="d-inline-block ml-3 align-top">I develop a general purpose applications using many languages :</p>
                         </div>
                         <div className="ml-5">
                             <TechTag tag="python" tech="Python" name={tags["python"]} size={20} color="skyblue" />
@@ -161,31 +161,31 @@ const AboutPage = (props) => {
                         </div>
                         <br/>
                         <ul class="list-group">
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I use Python packages such as Scikit learn, MatPlotib, NumPy, etc. for Data Science, Mathematics, Probability and Statistics.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a very good knowledge in Artificial Intelligence, Machine Learning and Deep Learning Skill.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I develop SOA Microsoft applications using C#, WCF, Windows Forms, WPF, etc.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a good proficiency in JavaScript, including DOM manipulation and the JavaScript object model (JSON).
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I developed this awesome website with Gatsby and React js.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I use modern authorization mechanisms, such as JSON Web Token.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> Good Knowledge of Node.js Frameworks, RESTful APIs and API Communications.
                         </li>
@@ -195,7 +195,7 @@ const AboutPage = (props) => {
                             <span className="text-success d-inline-block" title="prism">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Software development and database management skills : </p>
+                            <p className="d-inline-block ml-3 align-top">Software development and database management skills : </p>
                         </div>
 
                         <div className="ml-5">
@@ -210,26 +210,26 @@ const AboutPage = (props) => {
                         <br/>
                         <ul class="list-group">
 
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span>  I use Scrum project management methodology, git version control system and GitKraken Tool.
                         </li>
 
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I'm familiar with Teams and Slack channels.
                         </li>
 
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts.
                         </li>
 
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
     <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a good knowledge of CRUD operations, interfacing with different layers of the development frame work and ORMs.
                         </li>
-                        <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I create NoSQL database : PostgreSQL, FireBase and SQLite Database.
                         </li>
