@@ -12,7 +12,7 @@ import TechTag from "../components/tags/TechTag"
 
 const AboutPage = (props) => {
     const labels = props.data.site.siteMetadata.labels
-    const aboutTags = ["react", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "gatsby","unity", "csharp", "swift","swiftui"]
+    const aboutTags = ["react", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "postgresql", "firebase", "gatsby","unity", "csharp", "swift","swiftui"]
     const tags = {}
 
     labels.forEach(label => {
@@ -47,12 +47,13 @@ const AboutPage = (props) => {
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
                             <p className="d-inline-block ml-3 w-75 align-top">I build native & cross-platform games & mobile apps from idea to stores using : Swift, Objectif C, React-Native and Unity 3D : </p>
-                                <div className="ml-5">
+                            <div className="ml-5">
                                   <TechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
                                   <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
-                                  <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" /></div>
-                                </div>
-                                  <br/>
+                                  <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
+                            </div>
+                        </div>
+                        <br/>
                         <ul class="list-group">
 
                             <li className="d-inline-block ml-3 w-75 align-top">
@@ -198,13 +199,12 @@ const AboutPage = (props) => {
                         </div>
 
                         <div className="ml-5">
-                            <TechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="white" />
+                            <TechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="darkseagreen" />
                             <TechTag tag="slack" tech="Slack" name={tags["slack"]} size={20} color="lightgreen" />
                             <TechTag tag="teams" tech="Teams" name={tags["teams"]} size={20} color="skyblue" />
-                            <TechTag tag="gatsby" tech="Gatsby" name={tags["gatsby"]} size={20} color="rebeccapurple" />
-                            <TechTag tag="html" tech="Html" name={tags["html"]} size={20} color="darkorange" />
-                            <TechTag tag="nodejs" tech="Node js" name={tags["nodejs"]} size={20} color="lightgreen" />
-                            <TechTag tag="javascript" tech="Javascript" name={tags["javascript"]} size={20} color="yellow" />
+                            <TechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} size={20} color="deepskyblue" />
+                            <TechTag tag="firebase" tech="FireBase" name={tags["firebase"]} size={20} color="yellow" />
+
 
                         </div>
                         <br/>
@@ -222,10 +222,8 @@ const AboutPage = (props) => {
 
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts
+                        </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts.
                         </li>
-
-              
 
                         <li className="d-inline-block ml-3 w-75 align-top"><span className="text-success d-inline-block" title="blazing">
     <AiFillRightCircle size={18} style={{ color: "orange" }} />
