@@ -12,7 +12,7 @@ import TechTag from "../components/tags/TechTag"
 
 const AboutPage = (props) => {
     const labels = props.data.site.siteMetadata.labels
-    const aboutTags = ["react", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "postgresql", "firebase", "gatsby","unity", "csharp", "swift","swiftui"]
+    const aboutTags = ["react", "git", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "postgresql", "firebase", "gatsby","unity", "csharp", "swift","swiftui"]
     const tags = {}
 
     labels.forEach(label => {
@@ -41,19 +41,19 @@ const AboutPage = (props) => {
                                Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span> , and lastly I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
                             </p>
                         <br />
-                        <h4>Skills</h4>
+                        <h3>Skills</h3>
                         <div>
-                            <span className="text-success d-inline-block" title="blazing">
+                            <span className="text-success d-inline" title="tags">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 align-top">I build native & cross-platform games & mobile apps from idea to stores using : Swift, Objectif C, React-Native and Unity 3D : </p>
-                            <div className="ml-5">
-                                  <TechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
-                                  <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
-                                  <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
-                            </div>
+                            <p className="d-inline ml-2 align-top">I build native & cross-platform games & mobile apps from idea to stores using : Swift, Objectif C, React-Native and Unity 3D : </p>
                         </div>
                         <br/>
+                        <div className="ml-5">
+                              <TechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
+                              <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
+                              <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
+                        </div>
                         <ul class="list-group">
 
                             <li className="d-inline-block ml-3 align-top">
@@ -102,10 +102,10 @@ const AboutPage = (props) => {
                         <div className="ml-5">
                             <TechTag tag="react" tech="React Native" name={tags["react"]} size={20} color="skyblue" />
                             <TechTag tag="expo" tech="Expo" name={tags["expo"]} size={20} color="white" />
-                            <TechTag tag="atom" tech="Atom" name={tags["atom"]} size={20} color="white" />
+                            <TechTag tag="atom" tech="Atom" name={tags["atom"]} size={20} color="lightgreen" />
                             <TechTag tag="vscode" tech="VS Code" name={tags["vscode"]} size={20} color="deepskyblue" />
                         </div>
-                          <br/>
+
                           <ul class="list-group">
                               <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
@@ -130,7 +130,7 @@ const AboutPage = (props) => {
                               <TechTag tag="unity" tech="Unity 3D" name={tags["unity"]} size={20} color="skyblue" />
                               <TechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
                           </div>
-                          <br/>
+
                           <ul class="list-group">
                               <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
@@ -143,12 +143,14 @@ const AboutPage = (props) => {
                               </li>
                           </ul>
                         <br/>
-                        <div>
-                            <span className="text-success d-inline-block" title="tags">
+
+                        <div >
+                            <span className="text-success d-inline" title="tags">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 align-top">I develop a general purpose applications using many languages :</p>
+                            <p className="d-inline ml-2 align-top">I develop a general purpose applications using many languages : </p>
                         </div>
+                      <br/>
                         <div className="ml-5">
                             <TechTag tag="python" tech="Python" name={tags["python"]} size={20} color="skyblue" />
                             <TechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
@@ -159,7 +161,7 @@ const AboutPage = (props) => {
                             <TechTag tag="javascript" tech="Javascript" name={tags["javascript"]} size={20} color="yellow" />
 
                         </div>
-                        <br/>
+
                         <ul class="list-group">
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
@@ -191,15 +193,17 @@ const AboutPage = (props) => {
                         </li>
                         </ul>
 
-                        <div className="mt-4">
-                            <span className="text-success d-inline-block" title="prism">
+                        <br/>
+                        <div >
+                            <span className="text-success d-inline" title="tags">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
                             </span>
-                            <p className="d-inline-block ml-3 align-top">Software development and database management skills : </p>
+                            <p className="d-inline ml-2 align-top">Software development and database management skills : </p>
                         </div>
-
+                        <br/>
                         <div className="ml-5">
                             <TechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="darkseagreen" />
+                            <TechTag tag="git" tech="Git" name={tags["git"]} size={20} color="darkorange" />
                             <TechTag tag="slack" tech="Slack" name={tags["slack"]} size={20} color="lightgreen" />
                             <TechTag tag="teams" tech="Teams" name={tags["teams"]} size={20} color="skyblue" />
                             <TechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} size={20} color="deepskyblue" />
@@ -207,7 +211,7 @@ const AboutPage = (props) => {
 
 
                         </div>
-                        <br/>
+
                         <ul class="list-group">
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
@@ -226,7 +230,7 @@ const AboutPage = (props) => {
                         </li>
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
-    <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I have a good knowledge of CRUD operations, interfacing with different layers of the development frame work and ORMs.
                         </li>
                         <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">

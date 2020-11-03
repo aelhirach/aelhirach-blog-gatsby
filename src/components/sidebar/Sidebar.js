@@ -50,16 +50,14 @@ const Sidebar = () => {
             `}
             render={data => (
                 <>
-                    <div className="sidebar-main border-right">
+                    <div className="sidebar-main " >
                         <Bio author={data.site.siteMetadata.author} tagline={data.site.siteMetadata.tagline} />
                         <SocialLinks contacts={data.site.siteMetadata.contacts} />
                         <div className="page-links">
-                            <Link to="/"><span className="link d-block py-1">Blog Home</span></Link>
+                            <span className=" d-block py-1">Blog Home</span>
                             <Link to="/about"><span className="link d-block py-1">About</span></Link>
                             <a href="mailto:elhirach.abderrazzak@gmail.com?subject=Hello from your website"><span className="link d-block py-1">Get in touch</span></a>
-
                         </div>
-
                         <div className=" tech-tags mt-4">
                             <div class="divider"></div>
                              <br/>
