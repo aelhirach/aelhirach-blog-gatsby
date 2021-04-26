@@ -17,7 +17,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  
 }
+
 
 
 .bottom-bar {
@@ -28,9 +30,10 @@
   justify-content: space-around;
 }
 .mobile-pages-main {
+  display: none;
   width: 100%;
   background: #6a6b6e;
-  display: none;
+
 }
 .head-logo {
   display: flex;
@@ -52,13 +55,19 @@ small {
     font-weight: bold;
     font-family: "Raleway";
     font-size: .95rem;
+    margin: 0em 1.0em;
 }
 
 
 @media only screen and (max-width: 850px) {
   .bottom-bar{display: flex;}
   .social-links{display: none;}
-  .mobile-pages-main{display: block;}
+  .mobile-pages-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+  
+  }
   .mobile-bio-main{
     display: flex;
     flex-direction: row;
