@@ -11,31 +11,26 @@ import "./header.css"
 import { TwitterFollowButton} from 'react-twitter-embed';
 
 import aelhirach from "../../images/aelhirach-small.jpg"
-
+import BuyMeACoffeeButton from "./BuyMeACoffeeButton"
 
 const Header = ({ siteTitle, tagline, author, contacts }) => {
 
-  return (
+  return (  
     <header
       className="head-main"
       style={{
         background: `#26293b`
       }}
     >
-      <div className="head-elements"
-        style={{
-          margin: `0`,
-          padding: `.75rem`
-        }}
-      >
+      <div className="head-elements" style={{  margin: `0`, padding: `.75rem` }}>
 
         <div className="head-logo ml-4" >
-                <img style={{ marginRight :`10px`, maxWidth: `10vw`, maxHeight: `12vw`, borderRadius: `40%`,boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
-
-                <TwitterFollowButton   screenName={'a_elhirach'} />
-
+                <img style={{ marginRight :`10px`, maxWidth: `10vw`, maxHeight: `12vw`, minWidth: `4vw`, borderRadius: `40%`, boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
+                <div className="head-twitter-buymeacoffe" >
+                  <TwitterFollowButton   screenName={'a_elhirach'} />
+                  <BuyMeACoffeeButton />
+                </div>
         </div>
-
 
         <SocialLinks contacts={contacts} />
       </div>
