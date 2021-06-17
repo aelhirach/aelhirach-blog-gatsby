@@ -19,7 +19,7 @@ module.exports = {
     tagline: siteConfig.tagline,
     description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android). He is also interested in Video streaming & TV production technologies, specially the A/V transcoding & professional codecs.  I like also staying up to date about aeronautics digital technologies and crash investigations !`,
     author: siteConfig.author.name,
-    image: "./src/images/aelhirach.jpg",
+    image: "/images/aelhirach.jpg",
     twitterUsername: "@a_elhirach",
     contacts: {
       linkedin: siteConfig.author.contacts.linkedin,
@@ -109,7 +109,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -156,7 +156,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify-cms`
