@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" description= "sqdqsdsqd" keywords={[`gatsby`, `javascript`, `react`, `web development`, `blog`, `graphql`]} />
+      <SEO title="Home" image="../images/aelhirach.jpg" keywords={[`gatsby`, `javascript`, `react`, `web development`, `blog`, `graphql`]} />
       <div className="index-main">
         <div className="sidebar px-4 py-2">
           <Sidebar />
