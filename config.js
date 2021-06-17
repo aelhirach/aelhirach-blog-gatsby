@@ -1,8 +1,8 @@
 "use strict"
 
 module.exports = {
-  siteUrl: "https://aelhirach.me",
-  title: "EL HIRACH ABDERRAZZAK Mobile Engineer",
+  siteUrl: "https://www.aelhirach.me",
+  title: "EL HIRACH ABDERRAZZAK",
   tagline: "I'm a Mobile Apps Engineer (iOS and Android). I like learning about TV production and aeronautics technologies ",
   copyright: "© 2020 EL HIRACH ABDERRAZZAK, All rights reserved",
   author: {
