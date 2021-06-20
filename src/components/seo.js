@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
 
-function SEO({ title, description, lang, image, meta }) {
+function SEO({ title, description, lang, image: metaImage, meta }) {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(
     graphql`
@@ -43,9 +43,10 @@ function SEO({ title, description, lang, image, meta }) {
   const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: `${siteUrl}${image || defaultImage}`,
+      image: metaImage && metaImage.src? `${site.siteMetadata.siteUrl}${metaImage.src}` : defaultImage,
       url: `${siteUrl}${pathname}`,
   }
+  
   
   return (
     <Helmet
@@ -96,7 +97,33 @@ function SEO({ title, description, lang, image, meta }) {
           name: `twitter:description`,
           content: seo.description,
         },
-      ].concat(meta)}
+      ].concat(
+          metaImage
+            ? [
+                {
+                  property: "og:image",
+                  content: defaultImage,
+                },
+                {
+                  property: "og:image:width",
+                  content: metaImage.width,
+                },
+                {
+                  property: "og:image:height",
+                  content: metaImage.height,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        ).concat(meta)}
     />
   )
 }
