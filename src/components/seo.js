@@ -43,7 +43,7 @@ function SEO({ title, description, lang, image: metaImage, meta }) {
   const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: metaImage && metaImage.src? `${site.siteMetadata.siteUrl}${metaImage.src}` : defaultImage,
+      image: metaImage && metaImage.src? `${site.siteMetadata.siteUrl}${metaImage.src}` : null,
       url: `${siteUrl}${pathname}`,
   }
 
@@ -101,7 +101,7 @@ function SEO({ title, description, lang, image: metaImage, meta }) {
             ? [
                 {
                   property: "og:image",
-                  content: defaultImage,
+                  content: metaImage,
                 },
                 {
                   property: "og:image:width",
