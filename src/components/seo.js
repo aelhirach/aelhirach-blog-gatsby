@@ -40,7 +40,7 @@ const SEO = ({ description, lang, meta, title, imageUrl, imageAlt }) => {
   const { siteMetadata } = data.site;
   const metaDescription = description || siteMetadata.description;
   const defaultImageUrl = constructUrl(siteMetadata.siteUrl, data.ogImageDefault?.childImageSharp?.fixed?.src)
-  const ogImageUrl = imageUrl || defaultImageUrl;
+  const ogImageUrl = imageUrl;
 
   return (
     <Helmet
@@ -83,7 +83,7 @@ const SEO = ({ description, lang, meta, title, imageUrl, imageAlt }) => {
         },
         {
           property: "twitter:image:alt",
-          content: imageAlt || "davidagood.com logo",
+          content: imageAlt || "aelhirach.me logo",
         },
       ].concat(meta)}
     />
