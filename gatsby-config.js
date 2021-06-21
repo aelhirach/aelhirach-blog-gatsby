@@ -19,7 +19,7 @@ module.exports = {
     tagline: siteConfig.tagline,
     description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android). He is also interested in Video streaming & TV production technologies, specially the A/V transcoding & professional codecs.  I like also staying up to date about aeronautics digital technologies and crash investigations !`,
     author: siteConfig.author.name,
-    image: "src/images/aelhirach.jpg",
+    image: "src/images/gatsby-icon.png",
     twitterUsername: "@a_elhirach",
     contacts: {
       linkedin: siteConfig.author.contacts.linkedin,
