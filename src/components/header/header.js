@@ -11,7 +11,7 @@ import "./header.css"
 import { TwitterFollowButton} from 'react-twitter-embed';
 
 import aelhirach from "../../images/aelhirach-small.jpg"
-import BuyMeACoffeeButton from "./BuyMeACoffeeButton"
+
 
 const Header = ({ siteTitle, tagline, author, contacts }) => {
 
@@ -26,12 +26,11 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
 
         <div className="head-logo ml-4" >
                 <div>
-                    <img style={{ marginRight :`10px`, maxWidth: `10vw`, minWidth: `6vw`, borderRadius: `40%`, boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
+                    <img style={{ marginRight :`10px`, minWidth: `2vw`, borderRadius: `40%`, boxShadow: `1px 1px 3px`}} src={aelhirach} alt="" />
                 </div>
                 
                 <div className="head-twitter-buymeacoffe" >
                   <TwitterFollowButton   screenName={'a_elhirach'} />
-                  <BuyMeACoffeeButton />
                 </div>
         </div>
 
