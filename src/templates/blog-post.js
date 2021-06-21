@@ -34,7 +34,7 @@ const BlogPost = (props) => {
     <SEO
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
-      imageUrl={constructUrl(url, post.frontmatter.image?.childImageSharp?.fixed?.src)}
+      imageUrl={constructUrl(siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
       imageAlt={post.frontmatter.imageAlt}
     />
       <div className="post-page-main">
