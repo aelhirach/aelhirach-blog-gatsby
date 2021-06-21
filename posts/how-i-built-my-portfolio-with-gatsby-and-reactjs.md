@@ -5,7 +5,6 @@ tags:
 published: true
 date: 2021-01-05T13:54:07.809Z
 title: How I built my portfolio with Gatsby and ReactJS
-img: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 ---
 
 

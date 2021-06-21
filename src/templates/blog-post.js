@@ -31,7 +31,7 @@ const BlogPost = (props) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} image={post.frontmatter.img} />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.img} article = {true} />
       <div className="post-page-main">
         <div className="sidebar px-4 py-2">
           <Sidebar />

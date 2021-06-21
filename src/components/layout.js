@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
             <main className="p-4">{children}</main>
             <footer className="text-center">
               <hr/>
-              <p className="d-inline">© {new Date().getFullYear()} <a className="text-info" href="https://www.gatsbyjs.org">EL HIRACH Abderrazzak</a>, All Rights Reserved.</p>
+              <p className="d-inline">© {new Date().getFullYear()} EL HIRACH Abderrazzak, All Rights Reserved.</p>
 
             </footer>
           </div>
