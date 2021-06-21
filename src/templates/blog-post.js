@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./blog-post.css"
-import { GatsbyImage } from 'gatsby-plugin-image'
+import Image from "gatsby-image";
 import { constructUrl } from "../utils/urlUtil";
 import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
@@ -34,7 +34,7 @@ const BlogPost = (props) => {
     <SEO
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
-      imageUrl={constructUrl(props.data.site.siteMetadata.siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
+      imageUrl={constructUrl(siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
       imageAlt={post.frontmatter.imageAlt}
     />
       <div className="post-page-main">
@@ -53,25 +53,29 @@ const BlogPost = (props) => {
             <small><i>Published on </i> {post.frontmatter.date}</small>
             <br />
             <br />
-            {post.frontmatter.image && (
-                <>
-                <div className="page-cover-image">
-                  <figure>
-                    <GatsbyImage
-                      image={
-                        post.frontmatter.image.childImageSharp.gatsbyImageData
-                      }
-                      className="page-image"
-                      key={
-                        post.frontmatter.image.childImageSharp.gatsbyImageData.src
-                      }
-                      alt={post.frontmatter.imageAlt}
+            {post.frontmatter.image?.childImageSharp?.fluid && (
+              <>
+                <figure>
+                  <Image
+                    fluid={post.frontmatter.image.childImageSharp.fluid}
+                    alt={post.frontmatter.imageAlt}
+                  />
+                  <figcaption
+                    style={{
+                      textAlign: "center",
+                      fontSize: "14px",
+                      paddingTop: "8px",
+                    }}
+                  >
+                    <cite
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.imageCaption,
+                      }}
                     />
-                  </figure>
-                </div>
-                <br />
-                </>
-              )}
+                  </figcaption>
+                </figure>
+              </>
+            )}
             
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <CustomShareBlock title={post.frontmatter.title} siteName={siteName} url={url} />
@@ -104,9 +108,14 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         tags
         image {
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+          childImageSharp {
+            fixed(height: 600, width: 1200) {
+              src
             }
+            fluid(maxWidth: 700, maxHeight: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
