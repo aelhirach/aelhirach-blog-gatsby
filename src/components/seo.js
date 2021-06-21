@@ -46,8 +46,7 @@ function SEO({ title, description, lang, image: metaImage, meta }) {
       image: metaImage && metaImage.src? `${site.siteMetadata.siteUrl}${metaImage.src}` : defaultImage,
       url: `${siteUrl}${pathname}`,
   }
-  
-  
+
   return (
     <Helmet
       htmlAttributes={{
