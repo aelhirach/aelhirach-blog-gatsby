@@ -3,7 +3,8 @@ title: 'Using Emmet with React in Visual Studio Code - 2019'
 tags: ["react", "vscode"]
 published: true
 date: '2020-03-20'
-img: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
+image: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
+imageAlt: 'Water droplets on black background'
 ---
 
 Bienvenu sur mon blog,

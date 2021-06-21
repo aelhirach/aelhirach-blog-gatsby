@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./blog-post.css"
 import { GatsbyImage } from 'gatsby-plugin-image'
-
+import { constructUrl } from "../utils/urlUtil";
 import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
 import CustomShareBlock from "../components/CustomShareBlock"
@@ -31,7 +31,12 @@ const BlogPost = (props) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.img} article = {true} />
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+      imageUrl={constructUrl(props.data.site.siteMetadata.siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
+      imageAlt={post.frontmatter.imageAlt}
+    />
       <div className="post-page-main">
         <div className="sidebar px-4 py-2">
           <Sidebar />
@@ -48,19 +53,19 @@ const BlogPost = (props) => {
             <small><i>Published on </i> {post.frontmatter.date}</small>
             <br />
             <br />
-            {post.frontmatter.img && (
+            {post.frontmatter.image && (
                 <>
                 <div className="page-cover-image">
                   <figure>
                     <GatsbyImage
                       image={
-                        post.frontmatter.img.childImageSharp.gatsbyImageData
+                        post.frontmatter.image.childImageSharp.gatsbyImageData
                       }
                       className="page-image"
                       key={
-                        post.frontmatter.img.childImageSharp.gatsbyImageData.src
+                        post.frontmatter.image.childImageSharp.gatsbyImageData.src
                       }
-                      alt=""
+                      alt={post.frontmatter.imageAlt}
                     />
                   </figure>
                 </div>
@@ -98,7 +103,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        img {
+        image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)
             }
