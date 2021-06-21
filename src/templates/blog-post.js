@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./blog-post.css"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
@@ -37,7 +38,7 @@ const BlogPost = (props) => {
         </div>
 
         <div className="post-main">
-          <SEO title={post.frontmatter.title} />
+          <SEO title={post.frontmatter.title} image={post.frontmatter.img} />
           <div className="mt-3">
             <h2 className="heading">{post.frontmatter.title}</h2>
             <div className="d-block">
@@ -45,6 +46,28 @@ const BlogPost = (props) => {
             </div>
             <br />
             <small><i>Published on </i> {post.frontmatter.date}</small>
+            <br />
+            <br />
+            {post.frontmatter.img && (
+                <>
+                <div className="page-cover-image">
+                  <figure>
+                    <GatsbyImage
+                      image={
+                        post.frontmatter.img.childImageSharp.gatsbyImageData
+                      }
+                      className="page-image"
+                      key={
+                        post.frontmatter.img.childImageSharp.gatsbyImageData.src
+                      }
+                      alt=""
+                    />
+                  </figure>
+                </div>
+                <br />
+                </>
+              )}
+            
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <CustomShareBlock title={post.frontmatter.title} siteName={siteName} url={url} />
           </div>

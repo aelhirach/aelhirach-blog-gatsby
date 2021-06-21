@@ -2,15 +2,14 @@
 tags:
   - graphql
   - gatsby
-published: true
-date: 2021-01-05T13:54:07.809Z
-title: How I built my portfolio with Gatsby and ReactJS
-img: 'https://flexible-gatsby.netlify.app/static/2976ff59f8f22ab7ff374fdcaad644df/f610a/i-rest.avif'
+published: false
+date: 2021-20-06T13:54:07.809Z
+title: Software Engineering Introduction 01
+img: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 ---
 
 
-First of all welcome to my personal blog and to my first Blog Post. In this article I'am going to explain how I created this portfolio and why I decided to do it.
-
+In this series of articles I’m going to tell you how one can design a digital system and become a software engineer. Hence, I'll expalain all the steps of the analysis and the development of a software. This course is for anyone who is even in their starting stages of programming. I
 
 
 ##Why did I need to create my own blog
@@ -18,7 +17,6 @@ First of all welcome to my personal blog and to my first Blog Post. In this arti
 For some time now, I've been thinking about creating a blog where I can share my ideas and also share tips and tricks about several subjects, from technical tutorials to productivity and anything that will cross my mind.
 
 At the beginnig, I was somewhat hesitant about whether using online publishing platform as : medium or many other  alternatives, or starting with my own blog that I have to create from scratch. But then I got convinced that I should do that by myself since I'am already a Mobile Developer, I need to be creative and show off my technical skills and share that code with recruiters. 
-
 
 
 ##Choosing the tech stack : Gatsby & React JS

@@ -35,8 +35,8 @@ const AboutPage = (props) => {
                     <SEO title="About" />
                     <div className="mt-3">
                         <h2 className="heading">About</h2>
-                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), i'm working as Mobile Apps & Games Engineer (iOS & Android) originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
-                               living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span>  since 2012, i'am also interested in Video streaming & TV production technologies,
+                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Mobile Apps & Games Engineer (iOS & Android) originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
+                               living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span>  since 2012, I'am also interested in Video streaming & TV production technologies,
                                specially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations.
                                Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span> , and lastly I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
                             </p>
@@ -54,7 +54,7 @@ const AboutPage = (props) => {
                               <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
                               <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
                         </div>
-                        <ul class="list-group">
+                        <ul className="list-group">
 
                             <li className="d-inline-block ml-3 align-top">
                             <span className="text-success d-inline-block" title="blazing">
@@ -106,7 +106,7 @@ const AboutPage = (props) => {
                             <TechTag tag="vscode" tech="VS Code" name={tags["vscode"]} size={20} color="deepskyblue" />
                         </div>
 
-                          <ul class="list-group">
+                          <ul className="list-group">
                               <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
@@ -131,7 +131,7 @@ const AboutPage = (props) => {
                               <TechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
                           </div>
 
-                          <ul class="list-group">
+                          <ul className="list-group">
                               <li className="d-inline-block ml-3 align-top">
                               <span className="text-success d-inline-block" title="blazing">
                                   <AiFillRightCircle size={18} style={{ color: "orange" }} />
@@ -162,7 +162,7 @@ const AboutPage = (props) => {
 
                         </div>
 
-                        <ul class="list-group">
+                        <ul className="list-group">
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I use Python packages such as Scikit learn, MatPlotib, NumPy, etc. for Data Science, Mathematics, Probability and Statistics.
@@ -212,7 +212,7 @@ const AboutPage = (props) => {
 
                         </div>
 
-                        <ul class="list-group">
+                        <ul className="list-group">
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />

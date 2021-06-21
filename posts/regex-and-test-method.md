@@ -3,6 +3,7 @@ title: 'JavaScript Regular Expressions and the Test() Method'
 tags: ["javascript"]
 published: true
 date: '2020-01-06'
+img: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 ---
 
 [Video at YouTube](https://youtu.be/vAP8NLDzGwc). <br>

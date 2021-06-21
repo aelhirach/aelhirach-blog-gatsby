@@ -59,7 +59,7 @@ const Sidebar = () => {
                             <a href="mailto:elhirach.abderrazzak@gmail.com?subject=Hello from your website"><span className="link d-block py-1">Get in touch</span></a>
                         </div>
                         <div className=" tech-tags mt-4">
-                            <div class="divider"></div>
+                            <div className="divider"></div>
                              <br/>
                             <TechTags labels={data.site.siteMetadata.labels} posts={data.allMarkdownRemark.edges} />
                         </div>
