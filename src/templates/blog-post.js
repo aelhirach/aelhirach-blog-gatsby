@@ -33,7 +33,7 @@ const BlogPost = (props) => {
     <Layout>
     <SEO
       title={post.frontmatter.title}
-      description="sqdsqdqsdqsds"
+      description={post.frontmatter.description || post.excerpt}
       imageUrl={constructUrl(siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
       imageAlt={post.frontmatter.imageAlt}
     />
