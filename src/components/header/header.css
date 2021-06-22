@@ -38,16 +38,15 @@
 .head-logo {
   display: flex;
   flex-direction: row;
-  align-content: center;
-  
+
 }
 
-.head-twitter-buymeacoffe {
+.head-twitter-name {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   align-items : start;
-  justify-content: start;
+  justify-content: flex-start;
   
 }
 
