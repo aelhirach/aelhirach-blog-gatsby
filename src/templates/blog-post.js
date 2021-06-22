@@ -33,7 +33,7 @@ const BlogPost = (props) => {
     <Layout>
     <SEO
       title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
+      description="sqdsqdqsdqsds"
       imageUrl={constructUrl(siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
       imageAlt={post.frontmatter.imageAlt}
     />
@@ -43,7 +43,6 @@ const BlogPost = (props) => {
         </div>
 
         <div className="post-main">
-          <SEO title={post.frontmatter.title} />
           <div className="mt-3">
             <h2 className="heading">{post.frontmatter.title}</h2>
             <div className="d-block">
