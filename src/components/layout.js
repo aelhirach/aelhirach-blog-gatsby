@@ -11,9 +11,10 @@ import { StaticQuery, graphql } from "gatsby"
 import "bootstrap/dist/css/bootstrap.css"
 import Header from "./header/header"
 import "./layout.css"
+import SubscriptionForm from "./subscriptionForm"
 
 const Layout = ({ children }) => {
-
+  
   return (
     <StaticQuery
       query={graphql`
@@ -43,17 +44,12 @@ const Layout = ({ children }) => {
             author={data.site.siteMetadata.author}
             contacts={data.site.siteMetadata.contacts} />
           <div
-            style={{
-              margin: `0 auto`,
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: 0,
-            }}
+            
           >
             <main className="p-4">{children}</main>
             <footer className="text-center">
-              <hr/>
-              <p className="d-inline">© {new Date().getFullYear()} EL HIRACH Abderrazzak, All Rights Reserved.</p>
-
+              <SubscriptionForm/>
+            
             </footer>
           </div>
         </>

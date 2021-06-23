@@ -18,9 +18,7 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
   return (  
     <header
       className="head-main"
-      style={{
-        background: `#26293b`
-      }}
+      
     >
       <div className="head-elements" style={{  padding: `.75rem` }}>
 
