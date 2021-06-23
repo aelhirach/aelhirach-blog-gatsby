@@ -44,7 +44,7 @@ const SubscriptionForm = () => {
      <div className="innerBox row justify-content-center">
          <div className="col-xl-6 col-lg-8">
              <h3>Subscribe to my newsletter</h3>
-             <p>Love to read our articles? Sign up now to get fresh content about blogger, SEO, make money, templates directly to your inbox.</p>
+             <p>Love to read my articles? Sign up now to get fresh content about software engineering, productivity and my achievements in life directly to your inbox.</p>
          </div>
      </div>
    <div className="row justify-content-center">
