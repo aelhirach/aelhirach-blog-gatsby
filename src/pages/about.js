@@ -8,7 +8,25 @@ import { AiFillRightCircle } from "react-icons/ai"
 import "./index.css"
 
 import Sidebar from "../components/sidebar/Sidebar"
-import TechTag from "../components/tags/TechTag"
+
+
+const MyTechTag = (props) => {
+    const { tech, name, size, color } = props
+    return (
+        <div className="d-inline-block p-1">
+                <button className="tech-tag text-white">
+                    <p className="d-inline">{tech} </p>
+                    <div className="d-inline" style={{ fontSize: size, color: color }}><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} style={{fill: `${color}`}}>
+                            <title>{tech}</title>
+                            <path
+                                d={name} />
+                        </svg></div>
+                </button>
+        </div>
+    )
+}
+
+
 
 const AboutPage = (props) => {
     const labels = props.data.site.siteMetadata.labels
@@ -50,9 +68,9 @@ const AboutPage = (props) => {
                         </div>
                         <br/>
                         <div className="ml-5">
-                              <TechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
-                              <TechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
-                              <TechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
+                              <MyTechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
+                              <MyTechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
+                              <MyTechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
                         </div>
                         <ul className="list-group">
 
@@ -100,10 +118,10 @@ const AboutPage = (props) => {
                         </ul>
                         <br/>
                         <div className="ml-5">
-                            <TechTag tag="react" tech="React Native" name={tags["react"]} size={20} color="skyblue" />
-                            <TechTag tag="expo" tech="Expo" name={tags["expo"]} size={20} color="white" />
-                            <TechTag tag="atom" tech="Atom" name={tags["atom"]} size={20} color="lightgreen" />
-                            <TechTag tag="vscode" tech="VS Code" name={tags["vscode"]} size={20} color="deepskyblue" />
+                            <MyTechTag tag="react" tech="React Native" name={tags["react"]} size={20} color="skyblue" />
+                            <MyTechTag tag="expo" tech="Expo" name={tags["expo"]} size={20} color="white" />
+                            <MyTechTag tag="atom" tech="Atom" name={tags["atom"]} size={20} color="lightgreen" />
+                            <MyTechTag tag="vscode" tech="VS Code" name={tags["vscode"]} size={20} color="deepskyblue" />
                         </div>
 
                           <ul className="list-group">
@@ -127,8 +145,8 @@ const AboutPage = (props) => {
                           </ul>
                           <br/>
                           <div className="ml-5">
-                              <TechTag tag="unity" tech="Unity 3D" name={tags["unity"]} size={20} color="skyblue" />
-                              <TechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
+                              <MyTechTag tag="unity" tech="Unity 3D" name={tags["unity"]} size={20} color="skyblue" />
+                              <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
                           </div>
 
                           <ul className="list-group">
@@ -152,13 +170,13 @@ const AboutPage = (props) => {
                         </div>
                       <br/>
                         <div className="ml-5">
-                            <TechTag tag="python" tech="Python" name={tags["python"]} size={20} color="skyblue" />
-                            <TechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
-                            <TechTag tag="react" tech="React js" name={tags["react"]} size={20} color="deepskyblue" />
-                            <TechTag tag="gatsby" tech="Gatsby" name={tags["gatsby"]} size={20} color="rebeccapurple" />
-                            <TechTag tag="html" tech="Html" name={tags["html"]} size={20} color="darkorange" />
-                            <TechTag tag="nodejs" tech="Node js" name={tags["nodejs"]} size={20} color="lightgreen" />
-                            <TechTag tag="javascript" tech="Javascript" name={tags["javascript"]} size={20} color="yellow" />
+                            <MyTechTag tag="python" tech="Python" name={tags["python"]} size={20} color="skyblue" />
+                            <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
+                            <MyTechTag tag="react" tech="React js" name={tags["react"]} size={20} color="deepskyblue" />
+                            <MyTechTag tag="gatsby" tech="Gatsby" name={tags["gatsby"]} size={20} color="rebeccapurple" />
+                            <MyTechTag tag="html" tech="Html" name={tags["html"]} size={20} color="darkorange" />
+                            <MyTechTag tag="nodejs" tech="Node js" name={tags["nodejs"]} size={20} color="lightgreen" />
+                            <MyTechTag tag="javascript" tech="Javascript" name={tags["javascript"]} size={20} color="yellow" />
 
                         </div>
 
@@ -202,12 +220,12 @@ const AboutPage = (props) => {
                         </div>
                         <br/>
                         <div className="ml-5">
-                            <TechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="darkseagreen" />
-                            <TechTag tag="git" tech="Git" name={tags["git"]} size={20} color="darkorange" />
-                            <TechTag tag="slack" tech="Slack" name={tags["slack"]} size={20} color="lightgreen" />
-                            <TechTag tag="teams" tech="Teams" name={tags["teams"]} size={20} color="skyblue" />
-                            <TechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} size={20} color="deepskyblue" />
-                            <TechTag tag="firebase" tech="FireBase" name={tags["firebase"]} size={20} color="yellow" />
+                            <MyTechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="darkseagreen" />
+                            <MyTechTag tag="git" tech="Git" name={tags["git"]} size={20} color="darkorange" />
+                            <MyTechTag tag="slack" tech="Slack" name={tags["slack"]} size={20} color="lightgreen" />
+                            <MyTechTag tag="teams" tech="Teams" name={tags["teams"]} size={20} color="skyblue" />
+                            <MyTechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} size={20} color="deepskyblue" />
+                            <MyTechTag tag="firebase" tech="FireBase" name={tags["firebase"]} size={20} color="yellow" />
 
 
                         </div>
