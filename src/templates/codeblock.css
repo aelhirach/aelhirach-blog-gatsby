@@ -44,7 +44,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Code blocks */
 pre[class*="language-"] {
 	box-shadow: 1px 1px 3px;
-    max-width: 750px;
+    max-width: 850px;
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
@@ -52,22 +52,22 @@ pre[class*="language-"] {
 
 @media only screen and (max-width: 1200px) {
     pre[class*="language-"] {
-    max-width: 650px;
+    max-width: 750px;
     }
 }
 @media only screen and (max-width: 1100px) {
     pre[class*="language-"] {
-    max-width: 550px;
+    max-width: 650px;
     }
 }
 @media only screen and (max-width: 1000px) {
     pre[class*="language-"] {
-    max-width: 500px;
+    max-width: 600px;
     }
 }
 @media only screen and (max-width: 600px) {
     pre[class*="language-"] {
-    max-width: 400px;
+    max-width: 450px;
     }
 }
 @media only screen and (max-width: 450px) {
