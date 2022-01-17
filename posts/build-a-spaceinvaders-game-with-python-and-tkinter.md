@@ -1,7 +1,6 @@
 ---
 tags:
-  - graphql
-  - gatsby
+  - python
 published: true
 date: 2022-01-17T13:54:07.809Z
 title: Build a SpaceInvaders Game With Python and Tkinter
@@ -17,8 +16,17 @@ In this tutorial, you’ll learn how to build a complete SpaceInvators game, inc
 - Moving objects according to the game logic
 - Detecting collisions between objects
 
-Click the link below to download the code for this project and follow along as you build your game:
+I have added this [project on GitHub](https://github.com/aelhirach/spaceInvaders). Feel free to download and experiment with it! To make this project work, you need to install Python3 & Tkinter :
 
+``` python
+sudo apt install python3
+# brew install python3 => on mac
+sudo apt install python3-pip
+# pip3 install --upgrade pip  => on mac
+pip3 install tk  
+```
+
+<br />
 
 ## 1 - Drawing the game canvas with Tkinter :
 
@@ -292,10 +300,11 @@ def isOnColision(bullet, bloc):
 
 #Conclusion
 
-In this step-by-step tutorial, we learned the basics of how to use Python with by making a game SpaceInvators.
-One thing to keep in mind, making a game won't come to you overnight even if you are an expert programmer. Some skills in the process of game development can’t be skipped over no matter what you do. However, start making games the first day you begin your learning journey it will hugely improve your skills. The skills and resources provided in this tutorial will give you a great stepping stone, and an important part of making a game is how you plan step by step to make that game.
+In this step-by-step tutorial, we learned the basics of how to use Python by making a game.
+One thing to keep in mind, making a game won't come to you overnight even if you are an expert programmer. Some skills in the process of game development can’t be skipped over no matter what you do. However, start making games the first day you begin your learning journey it will hugely improve your skills.
 
+The skills and resources provided in this tutorial will give you a great stepping stone, and an important part of making a game is how you plan step by step to make that game.
 
 You have clearly understood that the best way to improve and learn how you make games is by making games.
 
-Good luck out there, and I wish you the best of luck with your game development journey!
+Good luck out there, and I wish you the best of luck with pyhton & game development journey!
