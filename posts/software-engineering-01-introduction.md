@@ -17,7 +17,7 @@ In this series of articles I’m going to tell you how one can design a digital 
 
 For some time now, I've been thinking about creating a blog where I can share my ideas and also share tips and tricks about several subjects, from technical tutorials to productivity and anything that will cross my mind.
 
-At the beginnig, I was somewhat hesitant about whether using online publishing platform as : medium or many other  alternatives, or starting with my own blog that I have to create from scratch. But then I got convinced that I should do that by myself since I'am already a Mobile Developer, I need to be creative and show off my technical skills and share that code with recruiters. 
+At the beginnig, I was somewhat hesitant about whether using online publishing platform as : medium or many other  alternatives, or starting with my own blog that I have to create from scratch. But then I got convinced that I should do that by myself since I'am already a Mobile Developer, I need to be creative and show off my technical skills and share that code with recruiters.
 
 
 ##Choosing the tech stack : Gatsby & React JS
@@ -58,4 +58,3 @@ Netlify is one of the best places to deploy your Gatsby site. And it is super ea
 
 #Conclusion
 Gatsby takes care of everything, cache, minification, lazy load your images, etc. I had to do some work to improve SEO, like hit areas and aria-labels in some buttons for better score. I'm very happy with the results of my site. I'll do my best to keep it updated. Please go and fork it, use it and build your own: https://github.com/aelhirach/aelhirach-blog-gatsby.
-

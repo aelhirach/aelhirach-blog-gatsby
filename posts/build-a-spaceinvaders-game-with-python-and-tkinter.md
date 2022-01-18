@@ -4,6 +4,8 @@ tags:
 published: true
 date: 2022-01-17T13:54:07.809Z
 title: Build a SpaceInvaders Game With Python and Tkinter
+image: './images/2dURadclkj7eAItDAkWqEDf.png'
+imageAlt: 'SpaceInvaders on Python3 and Tkinter'
 ---
 
 If you have learned pyhton basics and you want to put your skills into practice, this game tutorial is going to help you to achieve your goal in a quick and handy way.

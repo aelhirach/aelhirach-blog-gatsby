@@ -1,7 +1,7 @@
 ---
 title: 'JavaScript Regular Expressions and the Test() Method'
 tags: ["javascript"]
-published: true
+published: false
 date: '2020-01-06'
 image: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 imageAlt: 'Water droplets on black background'
