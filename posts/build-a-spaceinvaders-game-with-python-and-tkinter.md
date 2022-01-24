@@ -4,7 +4,7 @@ tags:
 published: true
 date: 2022-01-17T13:54:07.809Z
 title: Build a SpaceInvaders Game With Python and Tkinter
-image: './images/2dURadclkj7eAItDAkWqEDf.png'
+image: './images/1_JoEIzf1tDaaVq-mdGkB0uw.jpeg'
 imageAlt: 'SpaceInvaders on Python3 and Tkinter'
 ---
 
@@ -34,7 +34,7 @@ pip3 install tk
 
 A SpaceInvators is a kind of video game derived from the action game in which the player control a ship or a character to destroy a large number of enemies using bullets while dodging enemy bullets to stay alive.
 
-Firstly, we are going to create the game screen with Tkinter package. To ensure good use of tkinter you need to consult the Tk documentation.  
+Firstly, we are going to create the game screen with Tkinter package. To ensure good use of tkinter you need to consult the [Tk documentation](https://docs.python.org/fr/3/library/tkinter.html).  
 
 
 One of the most used  geometry manager in Tkinter is Grid manager which organises the widgets in a 2-dimensional table. The main widget is split into a number of rows and columns, and each “cell” in the resulting table can hold a widget. We are going to use this manager to divid the user interface (main screen) into 2 areas: the game scene and the controle panel, containing respectivley the game objects and the buttons & labels to control and show the game status.  

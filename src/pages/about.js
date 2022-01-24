@@ -54,10 +54,10 @@ const AboutPage = (props) => {
                     <SEO title="About" />
                     <div className="mt-3">
                         <h2 className="heading">About</h2>
-                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Mobile Apps & Games Engineer (iOS & Android) originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
+                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Web & Mobile Apps Engineer. I'm originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
                                living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span>  since 2012, I'am also interested in Video streaming & TV production technologies,
                                specially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations.
-                               Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span> , and lastly I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
+                               Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span>. Finally, I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
                             </p>
                         <br />
                         <h3>Skills</h3>
@@ -187,7 +187,12 @@ const AboutPage = (props) => {
                           </li>
                           <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                               <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                          </span> Good understanding of Webpacker & ImportMaps frontend compilation process in Rails 7.
+                          </span> Knowledge of RoR and Gems such as : Devise, react_on_rails, active_model_serializers,...
+
+                          </li>
+                          <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> Good understanding of Webpacker & ImportMaps bundling & compilation process in Rails.
                           </li>
                           <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                               <AiFillRightCircle size={18} style={{ color: "orange" }} />
@@ -203,7 +208,7 @@ const AboutPage = (props) => {
                           </li>
                           <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                               <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                          </span> Good Knowledge of Node.js Frameworks, RESTful APIs and API Communications.
+                          </span> Good Knowledge of Node.js Frameworks, Express, webRTC, Sequelize & Mongoose ORMs, RESTful APIs and API Communications.
                           </li>
                           </ul>
 

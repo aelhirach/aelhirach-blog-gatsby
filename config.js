@@ -3,11 +3,11 @@
 module.exports = {
   siteUrl: "https://www.aelhirach.me",
   title: "EL HIRACH ABDERRAZZAK",
-  tagline: "I'm a Mobile Apps Engineer (iOS and Android). I like learning about TV production and aeronautics technologies ",
+  tagline: "I'm a Web & Mobile Apps Engineer. I like learning about TV production and aeronautics technologies ",
   copyright: "© 2020 EL HIRACH ABDERRAZZAK, All rights reserved",
   author: {
     name: "EL HIRACH ABDERRAZZAK",
-    bio: "I'm an IT industrial engineer working as Mobile Apps & Games Engineer, originally from Morroco but have been living in the beautiful city of Brussels since 2012.",
+    bio: "I'm an IT industrial engineer working as Web & Mobile Apps Developer, originally from Morroco but have been living in the beautiful city of Brussels since 2012.",
     contacts: {
       linkedin: "https://www.linkedin.com/in/abderrazzak-elhirach/",
       github: "https://github.com/aelhirach",
