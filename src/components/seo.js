@@ -83,7 +83,7 @@ const SEO = ({ description, lang, meta, title, imageUrl, imageAlt }) => {
         },
         {
           property: "twitter:image:alt",
-          content: imageAlt || "aelhirach.me logo",
+          content: imageAlt || "aelhirach.me",
         },
       ].concat(meta)}
     />

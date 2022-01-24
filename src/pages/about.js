@@ -11,12 +11,13 @@ import Sidebar from "../components/sidebar/Sidebar"
 
 
 const MyTechTag = (props) => {
-    const { tech, name, size, color } = props
+    const { tech, viewBox, name, width, height, color } = props
     return (
         <div className="d-inline-block p-1">
                 <button className="tech-tag text-white">
                     <p className="d-inline">{tech} </p>
-                    <div className="d-inline" style={{ fontSize: size, color: color }}><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} style={{fill: `${color}`}}>
+                    <div className="d-inline" style={{ fontSize: height, color: color }}>
+                        <svg role="img" viewBox= {viewBox || "0 0 24 24"} xmlns="http://www.w3.org/2000/svg" width={width} height={height} style={{fill: `${color}`}}>
                             <title>{tech}</title>
                             <path
                                 d={name} />
@@ -30,7 +31,7 @@ const MyTechTag = (props) => {
 
 const AboutPage = (props) => {
     const labels = props.data.site.siteMetadata.labels
-    const aboutTags = ["react", "git", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "postgresql", "firebase", "gatsby","unity", "csharp", "swift","swiftui"]
+    const aboutTags = ["react", "git", "ruby", "rails", "python", "nodejs", "expo", "xcode", "atom", "vscode", "gitkraken", "slack", "teams", "javascript", "html", "postgresql", "firebase", "gatsby","unity", "csharp", "swift","swiftui"]
     const tags = {}
 
     labels.forEach(label => {
@@ -68,9 +69,9 @@ const AboutPage = (props) => {
                         </div>
                         <br/>
                         <div className="ml-5">
-                              <MyTechTag tag="swift" tech="Swift" name={tags["swift"]} size={20} color="orange" />
-                              <MyTechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} size={20} color="deepskyblue" />
-                              <MyTechTag tag="xcode" tech="Xcode" name={tags["xcode"]} size={20} color="deepskyblue" />
+                              <MyTechTag tag="swift" tech="Swift" name={tags["swift"]} width={20} height={20} color="orange" />
+                              <MyTechTag tag="swiftui" tech="SwiftUI" name={tags["swiftui"]} width={20} height={20} color="deepskyblue" />
+                              <MyTechTag tag="xcode" tech="Xcode" name={tags["xcode"]} width={20} height={20} color="deepskyblue" />
                         </div>
                         <ul className="list-group">
 
@@ -118,10 +119,10 @@ const AboutPage = (props) => {
                         </ul>
                         <br/>
                         <div className="ml-5">
-                            <MyTechTag tag="react" tech="React Native" name={tags["react"]} size={20} color="skyblue" />
-                            <MyTechTag tag="expo" tech="Expo" name={tags["expo"]} size={20} color="white" />
-                            <MyTechTag tag="atom" tech="Atom" name={tags["atom"]} size={20} color="lightgreen" />
-                            <MyTechTag tag="vscode" tech="VS Code" name={tags["vscode"]} size={20} color="deepskyblue" />
+                            <MyTechTag tag="react" tech="React Native" name={tags["react"]} width={20} height={20} color="skyblue" />
+                            <MyTechTag tag="expo" tech="Expo" name={tags["expo"]} width={20} height={20} color="white" />
+                            <MyTechTag tag="atom" tech="Atom" name={tags["atom"]} width={20} height={20} color="lightgreen" />
+                            <MyTechTag tag="vscode" tech="VS Code" name={tags["vscode"]} width={20} height={20} color="deepskyblue" />
                         </div>
 
                           <ul className="list-group">
@@ -145,8 +146,8 @@ const AboutPage = (props) => {
                           </ul>
                           <br/>
                           <div className="ml-5">
-                              <MyTechTag tag="unity" tech="Unity 3D" name={tags["unity"]} size={20} color="skyblue" />
-                              <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
+                              <MyTechTag tag="unity" tech="Unity 3D" name={tags["unity"]} width={20} height={20} color="skyblue" />
+                              <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} width={20} height={20} color="pink" />
                           </div>
 
                           <ul className="list-group">
@@ -160,6 +161,52 @@ const AboutPage = (props) => {
                               </span> I use artificial intelligence (AI) algorithms to make brain puzzles games.
                               </li>
                           </ul>
+
+                          <br/>
+                          <div >
+                              <span className="text-success d-inline" title="tags">
+                                  <FaCheckCircle size={26} style={{ color: "success" }} />
+                              </span>
+                              <p className="d-inline ml-2 align-top">I build websites using ReactJS, Ruby on Rails & Nodejs : : </p>
+                          </div>
+
+                          <div className="ml-5">
+                              <MyTechTag tag="ruby" tech="Ruby " name={tags["ruby"]} width={24} height={24} color="red" />
+                              <MyTechTag tag="rails" tech="Rails" name={tags["rails"]} viewBox="5 5 20 20" width={40} height={24} color="red" />
+                              <MyTechTag tag="react" tech="React js" name={tags["react"]} width={20} height={24} color="deepskyblue" />
+                              <MyTechTag tag="gatsby" tech="Gatsby" name={tags["gatsby"]} width={20} height={24} color="rebeccapurple" />
+                              <MyTechTag tag="html" tech="Html" name={tags["html"]} width={20} height={24} color="darkorange" />
+                              <MyTechTag tag="nodejs" tech="Node js" name={tags["nodejs"]} width={20} height={24} color="lightgreen" />
+                              <MyTechTag tag="javascript" tech="Javascript" name={tags["javascript"]} width={20} height={24} color="yellow" />
+                          </div>
+
+                          <ul className="list-group">
+                          <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> Writing, developing, testing, and deploying web applications & APIs with Ruby on Rails.
+                          </li>
+                          <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> Good understanding of Webpacker & ImportMaps frontend compilation process in Rails 7.
+                          </li>
+                          <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> I have a good proficiency in JavaScript, including DOM manipulation and the JavaScript object model (JSON).
+                          </li>
+                          <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> I developed this awesome website with Gatsby and React js.
+                          </li>
+                          <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> I use modern authorization mechanisms, such as JSON Web Token.
+                          </li>
+                          <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
+                              <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                          </span> Good Knowledge of Node.js Frameworks, RESTful APIs and API Communications.
+                          </li>
+                          </ul>
+
                         <br/>
 
                         <div >
@@ -170,13 +217,9 @@ const AboutPage = (props) => {
                         </div>
                       <br/>
                         <div className="ml-5">
-                            <MyTechTag tag="python" tech="Python" name={tags["python"]} size={20} color="skyblue" />
-                            <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} size={20} color="pink" />
-                            <MyTechTag tag="react" tech="React js" name={tags["react"]} size={20} color="deepskyblue" />
-                            <MyTechTag tag="gatsby" tech="Gatsby" name={tags["gatsby"]} size={20} color="rebeccapurple" />
-                            <MyTechTag tag="html" tech="Html" name={tags["html"]} size={20} color="darkorange" />
-                            <MyTechTag tag="nodejs" tech="Node js" name={tags["nodejs"]} size={20} color="lightgreen" />
-                            <MyTechTag tag="javascript" tech="Javascript" name={tags["javascript"]} size={20} color="yellow" />
+                            <MyTechTag tag="python" tech="Python" name={tags["python"]} width={20} height={20} color="skyblue" />
+                            <MyTechTag tag="csharp" tech="C Sharp" name={tags["csharp"]} width={20} height={20} color="pink" />
+
 
                         </div>
 
@@ -193,22 +236,7 @@ const AboutPage = (props) => {
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
                         </span> I develop SOA Microsoft applications using C#, WCF, Windows Forms, WPF, etc.
                         </li>
-                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I have a good proficiency in JavaScript, including DOM manipulation and the JavaScript object model (JSON).
-                        </li>
-                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I developed this awesome website with Gatsby and React js.
-                        </li>
-                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I use modern authorization mechanisms, such as JSON Web Token.
-                        </li>
-                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> Good Knowledge of Node.js Frameworks, RESTful APIs and API Communications.
-                        </li>
+
                         </ul>
 
                         <br/>
@@ -220,12 +248,12 @@ const AboutPage = (props) => {
                         </div>
                         <br/>
                         <div className="ml-5">
-                            <MyTechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} size={20} color="darkseagreen" />
-                            <MyTechTag tag="git" tech="Git" name={tags["git"]} size={20} color="darkorange" />
-                            <MyTechTag tag="slack" tech="Slack" name={tags["slack"]} size={20} color="lightgreen" />
-                            <MyTechTag tag="teams" tech="Teams" name={tags["teams"]} size={20} color="skyblue" />
-                            <MyTechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} size={20} color="deepskyblue" />
-                            <MyTechTag tag="firebase" tech="FireBase" name={tags["firebase"]} size={20} color="yellow" />
+                            <MyTechTag tag="gitkraken" tech="Gitkraken" name={tags["gitkraken"]} width={20} height={20} color="darkseagreen" />
+                            <MyTechTag tag="git" tech="Git" name={tags["git"]} width={20} height={20} color="darkorange" />
+                            <MyTechTag tag="slack" tech="Slack" name={tags["slack"]} width={20} height={20} color="lightgreen" />
+                            <MyTechTag tag="teams" tech="Teams" name={tags["teams"]} width={20} height={20} color="skyblue" />
+                            <MyTechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} width={20} height={20} color="deepskyblue" />
+                            <MyTechTag tag="firebase" tech="FireBase" name={tags["firebase"]} width={20} height={20} color="yellow" />
 
 
                         </div>
@@ -253,7 +281,7 @@ const AboutPage = (props) => {
                         </li>
                         <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I create NoSQL database : PostgreSQL, FireBase and SQLite Database.
+                        </span> I create SQL & NoSQL databases : MySQL, PostgreSQL, FireBase and SQLite Database.
                         </li>
                         </ul>
                     </div>

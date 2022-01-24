@@ -11,8 +11,7 @@ title: How I built my portfolio with Gatsby and ReactJS
 First of all welcome to my personal blog and to my first Blog Post. In this article I'am going to explain how I created this portfolio and why I decided to do it.
 
 
-
-##Why did I need to create my own blog
+## Why did I need to create my own blog
 
 For some time now, I've been thinking about creating a blog where I can share my ideas and also share tips and tricks about several subjects, from technical tutorials to productivity and anything that will cross my mind.
 
@@ -20,7 +19,7 @@ At the beginnig, I was somewhat hesitant about whether using online publishing p
 
 
 
-##Choosing the tech stack : Gatsby & React JS
+## Choosing the tech stack : Gatsby & React JS
 
 When I decided to create my blog by myself, I had already been familiar with React Native as Mobile Technologie and intrested in ReactJS for the web side. This is why I started to look at lightweight ways using this technologies to make my website responsive, scalable and easy to keep updated and that’s exactly where Gatsby helps me.
 
@@ -50,11 +49,12 @@ This gatsby starter blog has some important plugins installed :
 
 
 
+## Deploy to Netlify
 
-#Deploy to Netlify
 Netlify is one of the best places to deploy your Gatsby site. And it is super easy to do, follow this
 [steps](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-netlify/).
 
 
-#Conclusion
+## Conclusion
+
 Gatsby takes care of everything, cache, minification, lazy load your images, etc. I had to do some work to improve SEO, like hit areas and aria-labels in some buttons for better score. I'm very happy with the results of my site. I'll do my best to keep it updated. Please go and fork it, use it and build your own: https://github.com/aelhirach/aelhirach-blog-gatsby.
