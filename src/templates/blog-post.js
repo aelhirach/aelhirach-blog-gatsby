@@ -75,7 +75,7 @@ const BlogPost = (props) => {
                 </figure>
               </>
             )}
-            
+
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <CustomShareBlock title={post.frontmatter.title} siteName={siteName} url={url} />
           </div>
@@ -109,7 +109,7 @@ export const query = graphql`
         tags
         image {
           childImageSharp {
-            fixed(height: 600, width: 1200) {
+            fixed(height: 627, width: 1200) {
               src
             }
             fluid(maxWidth: 700, maxHeight: 500) {
