@@ -7078,6 +7078,15 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
@@ -7430,6 +7439,13 @@ gatsby-plugin-sitemap@^2.12.0:
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.13.0"
+
+gatsby-plugin-static-folders@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-static-folders/-/gatsby-plugin-static-folders-1.0.1.tgz#f86739ab9fb974cb576b07be832867d2286ca96e"
+  integrity sha512-fKifQu32MDexSrkparA4xtEhJfZCrs831+PfnjZ0XcFx1JJoWgTbPSGYfrBzcDftqY0iaw497OYKOovo8eRCKA==
+  dependencies:
+    fs-extra "^7.0.1"
 
 gatsby-plugin-typescript@^2.12.1:
   version "2.12.1"

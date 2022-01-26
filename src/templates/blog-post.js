@@ -30,7 +30,7 @@ const BlogPost = (props) => {
   }
   const postImage = post.frontmatter.image ? getImage(post.frontmatter.image.childImageSharp.gatsbyImageData) : null
 
-  const image = post.frontmatter.image ? post.frontmatter.image : null
+  const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null
 
   return (
     <Layout>
@@ -104,7 +104,6 @@ export const query = graphql`
         tags
         imageAlt
         image: featured {
-          absolutePath
           childImageSharp {
             resize(width: 1200) {
               src
