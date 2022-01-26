@@ -1,18 +1,26 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_folder: static/assets
-public_folder: assets
+media_folder: posts/images
+public_folder: images
 
 collections:
-  - name: posts
-    label: Blog Posts
-    folder: posts
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'posts'
     create: true
+    slug: '{{slug}}'
     fields:
-      - { name: tags, label: Tags, widget: list, required: false }
-      - { name: published, label: Published, widget: boolean }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', format: 'YYYY-MM-DD HH:mm'}
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'featured Image', name: 'featured', widget: 'image', required: false }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
