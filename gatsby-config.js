@@ -21,7 +21,7 @@ module.exports = {
     tagline: siteConfig.tagline,
     description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android)!`,
     author: siteConfig.author.name,
-  
+
     social: {
       twitter: `a_elhirach`,
     },
@@ -40,7 +40,16 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/netlify-cms/index.js`,
+        enableIdentityWidget: true,
+        publicPath: 'admin',
+        htmlTitle: 'Content Manager',
+        includeRobots: false,
+      },
+    },
     {
             resolve: `gatsby-plugin-sitemap`,
             options: {
@@ -105,17 +114,17 @@ module.exports = {
         }
       },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/posts`,
-        name: `blog`,
+        name: `media`,
+        path: `${__dirname}/static/media`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'posts',
+        path: `${__dirname}/posts`,
       },
     },
     {
@@ -123,24 +132,26 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-relative-images`,
             options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            }
-          }, `gatsby-remark-responsive-iframe`,
+              staticFolderName: 'static',
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 630,
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },

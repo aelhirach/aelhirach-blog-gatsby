@@ -17,8 +17,6 @@ const BlogPost = (props) => {
   const url = `${siteUrl}${props.pageContext.slug}`;
   const tags = post.frontmatter.tags
 
-
-
   const getTechTags = (tags) => {
     const techTags = []
     tags.forEach((tag, i) => {
@@ -36,7 +34,7 @@ const BlogPost = (props) => {
 
   return (
     <Layout>
-    <SEO title={post.frontmatter.title} description={post.excerpt} image={image} keywords={tags} pathname={props.location.pathname} />
+    <SEO title={post.frontmatter.title} description={post.excerpt} image={image} pathname={props.location.pathname} />
     <div className="post-page-main">
         <div className="sidebar px-4 py-2">
           <Sidebar />

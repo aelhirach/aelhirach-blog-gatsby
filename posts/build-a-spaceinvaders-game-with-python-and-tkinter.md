@@ -4,7 +4,7 @@ tags:
 published: true
 date: 2022-01-17T13:54:07.809Z
 title: Build a SpaceInvaders Game With Python and Tkinter
-featured: './images/1_JoEIzf1tDaaVq-mdGkB0uw.png'
+featured: '/media/1_JoEIzf1tDaaVq-mdGkB0uw.png'
 imageAlt: 'SpaceInvaders on Python3 and Tkinter'
 ---
 
@@ -41,7 +41,7 @@ One of the most used  geometry manager in Tkinter is Grid manager which organise
 
 The rawspan parameter determine how many rows the widgets takes up. In our case the main screen will take 8 rows.
 
-![](./images/build-a-spaceinvaders-game-with-python-and-tkinter/screen.png)
+![](/media/build-a-spaceinvaders-game-with-python-and-tkinter/screen.png)
 
 
 ``` python
@@ -71,7 +71,7 @@ The game objects are represented by rectangles, each rectangle is specified as t
 `id = C.create_rectangle(x0, y0, x1, y1, option, ...)`
 
 
-![](./images/build-a-spaceinvaders-game-with-python-and-tkinter/create_rectangle.png)
+![](/media/build-a-spaceinvaders-game-with-python-and-tkinter/create_rectangle.png)
 
 
 ``` python
