@@ -9,8 +9,8 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
       query={detailsQuery}
       render={({site, openGraphImage}) => {
         const metaDescription = description || site.siteMetadata.description
-        const defaultImage = image || openGraphImage?.childImageSharp?.resize
-        const metaImage = defaultImage && defaultImage.src ? `${site.siteMetadata.siteUrl}${defaultImage.src}` : null
+        const defaultImage = image || openGraphImage
+        const metaImage = defaultImage && defaultImage.absolutePath ? `${defaultImage.absolutePath}` : null
         const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`
         return (
           <Helmet
@@ -70,11 +70,11 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 },
                 {
                   property: 'og:image:width',
-                  content: defaultImage.width
+                  content: defaultImage.childImageSharp.resize.width
                 },
                 {
                   property: 'og:image:height',
-                  content: defaultImage.height
+                  content: defaultImage.childImageSharp.resize.height
                 },
                 {
                   name: `twitter:card`,
@@ -130,6 +130,7 @@ const detailsQuery = graphql`
       }
     }
     openGraphImage: file(relativePath: {eq: "open-graph-image.png"}) {
+      absolutePath
       childImageSharp {
         resize(width: 1200) {
           src
