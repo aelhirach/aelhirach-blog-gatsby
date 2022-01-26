@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./blog-post.css"
-import Image from "gatsby-image";
-import { constructUrl } from "../utils/urlUtil";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
 import CustomShareBlock from "../components/CustomShareBlock"
@@ -28,23 +28,21 @@ const BlogPost = (props) => {
     })
     return techTags
   }
+  const postImage = post.frontmatter.image ? getImage(post.frontmatter.image.childImageSharp.gatsbyImageData) : null
+
+  const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null
 
   return (
     <Layout>
-    <SEO
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-      imageUrl={constructUrl(siteUrl, post.frontmatter.image?.childImageSharp?.fixed?.src)}
-      imageAlt={post.frontmatter.imageAlt}
-    />
-      <div className="post-page-main">
+    <SEO title={post.frontmatter.title} description={post.excerpt} image={image} pathname={props.location.pathname} />
+    <div className="post-page-main">
         <div className="sidebar px-4 py-2">
           <Sidebar />
         </div>
 
         <div className="post-main">
           <div className="mt-3">
-            <h2 className="heading">{post.frontmatter.title}</h2>
+            <h1 className="heading">{post.frontmatter.title}</h1>
             <div className="d-block">
               {getTechTags(tags)}
             </div>
@@ -52,13 +50,10 @@ const BlogPost = (props) => {
             <small><i>Published on </i> {post.frontmatter.date}</small>
             <br />
             <br />
-            {post.frontmatter.image?.childImageSharp?.fluid && (
+            {postImage && (
               <>
                 <figure>
-                  <Image
-                    fluid={post.frontmatter.image.childImageSharp.fluid}
-                    alt={post.frontmatter.imageAlt}
-                  />
+                  <GatsbyImage image={postImage} alt={post.frontmatter.imageAlt}/>
                   <figcaption
                     style={{
                       textAlign: "center",
@@ -107,14 +102,19 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        image {
+        imageAlt
+        image: featured {
           childImageSharp {
-            fixed(height: 627, width: 1200) {
+            resize(width: 1200) {
               src
+              height
+              width
             }
-            fluid(maxWidth: 700, maxHeight: 500) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 1200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }

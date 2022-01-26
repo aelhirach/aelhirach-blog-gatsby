@@ -1,106 +1,142 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { graphql, useStaticQuery } from "gatsby";
-import { constructUrl } from "../utils/urlUtil";
-
-const SEO = ({ description, lang, meta, title, imageUrl, imageAlt }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            social {
-              twitter
-            }
-            siteUrl
-          }
-        }
-        ogImageDefault: file(relativePath: {eq: "gatsby-icon.png"}) {
-          childImageSharp {
-            # These are the dimensions of the default file: src/images/gatsby-icon.png
-            fixed(height: 260, width: 260) {
-              src
-            }
-          }
-        }
-      }
-    `,
-  );
-
-  const { siteMetadata } = data.site;
-  const metaDescription = description || siteMetadata.description;
-  const defaultImageUrl = constructUrl(siteMetadata.siteUrl, data.ogImageDefault?.childImageSharp?.fixed?.src)
-  const ogImageUrl = imageUrl || defaultImageUrl;
-
+function SEO({ description, lang, image, meta, keywords, title, pathname }) {
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
+    <StaticQuery
+      query={detailsQuery}
+      render={({site, openGraphImage}) => {
+        const metaDescription = description || site.siteMetadata.description
+        const defaultImage = image || openGraphImage?.childImageSharp?.resize
+        const metaImage = defaultImage && defaultImage.src ? `${site.siteMetadata.siteUrl}${defaultImage.src}` : null
+        const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`
+        return (
+          <Helmet
+            htmlAttributes={{
+              lang,
+            }}
+            title={title}
+            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            meta={[
+              {
+                name: `description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:title`,
+                content: title,
+              },
+              {
+                property: `og:url`,
+                content: metaUrl,
+              },
+              {
+                property: `og:description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:type`,
+                content: `website`,
+              },
+              {
+                name: `twitter:creator`,
+                content: `@${site.siteMetadata.social.twitter}`,
+              },
+              {
+                name: `twitter:title`,
+                content: title,
+              },
+              {
+                name: `twitter:description`,
+                content: metaDescription,
+              },
+              {
+                name: 'google-site-verification',
+                content: 'QlRmuLQWttdkbKlZ0ZwIBX3xv0M8ouqTW3wE2Eg_jKI'
+              }
+
+
+            ]
+              .concat(metaImage ? [
+                {
+                  property: `og:image`,
+                  content: metaImage
+                },
+                {
+                  property: `og:image:alt`,
+                  content: title,
+                },
+                {
+                  property: 'og:image:width',
+                  content: defaultImage.width
+                },
+                {
+                  property: 'og:image:height',
+                  content: defaultImage.height
+                },
+                {
+                  name: `twitter:card`,
+                  content: `summary_large_image`,
+                }
+              ] : [])
+              .concat(
+                keywords.length > 0
+                  ? {
+                      name: `keywords`,
+                      content: keywords.join(`, `),
+                    }
+                  : []
+              )
+              .concat(meta)}
+          />
+        )
       }}
-      title={title}
-      titleTemplate={`%s | ${siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: "og:image",
-          content: ogImageUrl,
-        },
-        {
-          property: `twitter:card`,
-          // If image prop is passed use the larger card; Otherwise the default
-          // og image is just a little icon so use the smaller card
-          // More about cards here: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
-          content: imageUrl ? `summary_large_image` : `summary`,
-        },
-        {
-          property: `twitter:creator`,
-          content: siteMetadata.social.twitter,
-        },
-        {
-          property: "twitter:image:alt",
-          content: imageAlt || "aelhirach.me",
-        },
-      ].concat(meta)}
     />
-  );
-};
+  )
+}
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
-};
+  keywords: [],
+  pathname: ``
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-};
+  image: PropTypes.object,
+  meta: PropTypes.array,
+  keywords: PropTypes.arrayOf(PropTypes.string),
+  pathname: PropTypes.string,
+  title: PropTypes.string.isRequired
+}
 
-export default SEO;
+export default SEO
+
+const detailsQuery = graphql`
+  query DefaultSEOQuery {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        description
+        author
+        social {
+          twitter
+        }
+      }
+    }
+    openGraphImage: file(relativePath: {eq: "open-graph-image.png"}) {
+      childImageSharp {
+        resize(width: 1200) {
+          src
+          height
+          width
+        }
+      }
+    }
+  }
+`

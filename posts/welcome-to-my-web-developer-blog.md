@@ -3,7 +3,7 @@ title: 'Welcome To My Web Developer Blog'
 tags: ["react", "vscode", "git", "css", "python", "ruby", "java", "angular", "html", "php", "mongodb", "graphql", "gatsby" ]
 published: false
 date: '2020-08-20'
-image: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
+featured: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 imageAlt: 'Water droplets on black background'
 
 ---

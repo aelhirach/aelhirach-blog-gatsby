@@ -5,7 +5,7 @@ tags:
 published: false
 date: 2021-20-06T13:54:07.809Z
 title: Software Engineering Introduction 01
-image: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
+featured: './images/1cURajkPQj8eCtDHkWqasg.jpeg'
 imageAlt: 'Water droplets on black background'
 ---
 
