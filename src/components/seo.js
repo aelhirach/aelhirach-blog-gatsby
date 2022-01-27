@@ -55,11 +55,8 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               {
                 name: 'google-site-verification',
                 content: 'Gx7tw5v2_CQE99tM4P-p_u2J6Nikr9p7EoWPBd_1RVA'
-              },
-              {
-                name: `twitter:card`,
-                content: metaImage ? `summary_large_image` : `summary` ,
               }
+
             ]
               .concat(metaImage ? [
                 {
@@ -77,6 +74,10 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 {
                   property: 'og:image:height',
                   content: defaultImage.height
+                },
+                {
+                  name: `twitter:card`,
+                  content: `summary_large_image` ,
                 }
 
               ] : [])
