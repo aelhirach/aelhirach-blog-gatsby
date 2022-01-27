@@ -39,16 +39,17 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/netlify-cms/index.js`,
-        enableIdentityWidget: true,
-        publicPath: 'admin',
-        htmlTitle: 'Content Manager',
-        includeRobots: false,
-      },
-    },
+    `gatsby-plugin-netlify-cms`,
+    // {
+    //   resolve: 'gatsby-plugin-netlify-cms',
+    //   options: {
+    //     modulePath: `${__dirname}/src/netlify-cms/index.js`,
+    //     enableIdentityWidget: true,
+    //     publicPath: 'admin',
+    //     htmlTitle: 'Content Manager',
+    //     includeRobots: false,
+    //   },
+    // },
     {
             resolve: `gatsby-plugin-sitemap`,
             options: {
