@@ -21,7 +21,6 @@ module.exports = {
     tagline: siteConfig.tagline,
     description: `EL HIRACH ABDERRAZZAK an IT Engineer working as Mobile Apps & Games Engineer (iOS & Android)!`,
     author: siteConfig.author.name,
-    openGraphImage: `open-graph-image.png`,
     social: {
       twitter: `a_elhirach`,
     },
@@ -113,13 +112,6 @@ module.exports = {
           }
         }
       },
-    {
-        resolve: 'gatsby-source-filesystem',
-        options: {
-          name: `static`,
-          path: `${__dirname}/static`
-        }
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

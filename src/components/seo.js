@@ -54,10 +54,12 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 name: 'google-site-verification',
-                content: 'QlRmuLQWttdkbKlZ0ZwIBX3xv0M8ouqTW3wE2Eg_jKI'
+                content: 'Gx7tw5v2_CQE99tM4P-p_u2J6Nikr9p7EoWPBd_1RVA'
+              },
+              {
+                name: `twitter:card`,
+                content: metaImage ? `summary_large_image` : `summary` ,
               }
-
-
             ]
               .concat(metaImage ? [
                 {
@@ -75,11 +77,8 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 {
                   property: 'og:image:height',
                   content: defaultImage.height
-                },
-                {
-                  name: `twitter:card`,
-                  content: `summary_large_image`,
                 }
+
               ] : [])
               .concat(
                 keywords.length > 0
@@ -129,7 +128,7 @@ const detailsQuery = graphql`
         }
       }
     }
-    openGraphImage: file(relativePath: {eq: "open-graph-image.png"}) {
+    openGraphImage: file(relativePath: {eq: "open-graph-image.jpg"}) {
       childImageSharp {
         resize(width: 1200) {
           src
