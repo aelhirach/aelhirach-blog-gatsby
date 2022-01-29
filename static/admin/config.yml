@@ -24,3 +24,4 @@ collections:
       - { label: 'featured Image', name: 'featured', widget: 'image', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      
