@@ -14,7 +14,7 @@ In this tutorial series we are going to learn a branch of Artificial Intelligenc
 - Optimal searches : Branch and bound (BB)
 
 
-In the first tutorial we are going to explain two fundamental Blind searches Depth First Search (DFS) & Breath First Search (BFS). In the next tutorials, we will learn the two other categories of search algorithms, namely Heuristic & Optimal searches. A the end of this,  The code for this program can be found in its entirety in my github account, the link being here:- https://github.com/aelhirach/AIAlgorithms
+In the first tutorial we are going to explain two fundamental Blind searches Depth First Search (DFS) & Breath First Search (BFS). In the next tutorials, we will learn the two other categories of search algorithms, namely Heuristic & Optimal searches. A the end of this tutorial series, we will solve a maze game (labyrinth) with all those search algorithms. The code for this program can be found in its entirety in my github account, the link being here:- https://github.com/aelhirach/AIAlgorithms.
 
 
 ## What is Artificial Intelligence & Search algorithms
