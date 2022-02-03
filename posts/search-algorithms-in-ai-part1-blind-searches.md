@@ -1,13 +1,12 @@
 ---
-tags:
-  - python
-published: true
-date: 2022-01-31T13:54:07.809Z
 title: 'Search Algorithms in AI : part 1 Blind Searches'
-slug:  'ia-blind-searches'
+tags: ["javascript"]
+published: true
+date: 2022-02-03T08:34:07.809Z
 featured: '/media/1cURajkPQj8eCtDHkWqasg.jpeg'
-imageAlt: 'SpaceInvaders on Python3 and Tkinter'
+imageAlt: 'Search Algorithms in AI : part 1 Blind Searches'
 ---
+
 
 In this tutorial series we are going to learn a branch of Artificial Intelligence called search algorithms. There are too many search algorithms out there to fit in one tutorial. Therefore, this tutorial series will instead discuss five of the fundamental search algorithms, divided into the following tree categories :
 - Blind searches : Depth First Search (DFS) & Breath First Search (BFS)  
@@ -15,7 +14,7 @@ In this tutorial series we are going to learn a branch of Artificial Intelligenc
 - Optimal searches : Branch and bound (BB)
 
 
-In the first tutorial we are going to explain two fundamental Blind searches Depth First Search (DFS) & Breath First Search (BFS). In the next tutorials, we will learn the two other categories of search algorithms, namely Heuristic & Optimal searches.
+In the first tutorial we are going to explain two fundamental Blind searches Depth First Search (DFS) & Breath First Search (BFS). In the next tutorials, we will learn the two other categories of search algorithms, namely Heuristic & Optimal searches. A the end of this,  The code for this program can be found in its entirety in my github account, the link being here:- https://www.kaggle.com/tracyporter/code-with-me-tab-feb-22?scriptVersionId=86778141
 
 
 ## What is Artificial Intelligence & Search algorithms
@@ -23,7 +22,7 @@ In the first tutorial we are going to explain two fundamental Blind searches Dep
 In short, Artificial intelligence (AI) is a branch of computer science concerned with building agents that perform tasks requiring human intelligence. Mostly, these agents perform certain search algorithms in the background in order to achieve their tasks. To solve a search problem we need to ask the following questions :
 
 **1. Solution search :**
-* How to formulate the problem in the proper way ?
+* How to formulate the problem in a proper way ?
 * How to find a proper solution ?
 * How to find the best solution ?
 
@@ -44,9 +43,7 @@ A search problem consists of a search space, an initial state, and a single or a
 
 
 
-
-
-![](/media/ia-blind-searches/search_tree.png)
+![](/media/search-algorithms-in-ai-part1-blind-searches/search_tree.png)
 
 For example, in the 8-Puzzle game
 
@@ -55,7 +52,7 @@ For example, in the 8-Puzzle game
 * The size of a search space : 9!/2
 
 
-![](/media/ia-blind-searches/puzzle_game_tree.png)
+![](/media/search-algorithms-in-ai-part1-blind-searches/puzzle_game_tree.png)
 
 Many problems in computer science can be represented in form of graphs. For instance, mapping routes, network routing, and scheduling are graph problems. Search algorithms solve graph problems by going through the search space of the problem domain, they analyze or calculate the information stored within it, with either discrete or continuous values.
 
@@ -68,22 +65,21 @@ A blind search (also called an uninformed search) is a search that works with no
 ### Depth-first search
 Depth-first search traverses the tree branch by branch, it starts at the root node and goes as far as it can down to the leaf nodes at the bottom of the tree before trying the next branch over. The following figure illustrates how the DFS algorithm explores the tree step by step :
 
-![](/media/ia-blind-searches/dfs_steps.png)
+![](/media/search-algorithms-in-ai-part1-blind-searches/dfs_steps.png)
 
-![](/media/ia-blind-searches/dfs_algorithm.png)
 
-![](/media/ia-blind-searches/dfs_example.png)
+
+![](/media/search-algorithms-in-ai-part1-blind-searches/dfs_example.png)
 
 ### Breadth-first search
 
 Breadth-first search traverses the tree level by level, visiting all of the nodes on the top level first, then all the nodes on the second level, and so on.
 
 
-![](/media/ia-blind-searches/bfs_steps.png)
+![](/media/search-algorithms-in-ai-part1-blind-searches/bfs_steps.png)
 
-![](/media/ia-blind-searches/bfs_algorithm.png)
 
-![](/media/ia-blind-searches/bfs_example.png)
+![](/media/search-algorithms-in-ai-part1-blind-searches/bfs_example.png)
 
 
 ## Programming search algorithms with C# language
@@ -374,7 +370,94 @@ each a particular class or struct :
 ```   
 
 
+</br>
+
+## Depth-first search algorithm
+
+![](/media/search-algorithms-in-ai-part1-blind-searches/dfs_algorithm.png)
+
+Since the DFS algorithm adds in each loop the children at the beginning of the Queue, we are going to create a method that returns a generic collection called Stack<Path> which represents a variable size last-in-first-out (LIFO) collection of instances of type Path. The DFS method receives the root node as a parameter and returns at the end a queue as a Stack object which contains all the paths explored by the algorithm as well as the Goal path which exists at the beginning of the queue. To make sure that child paths won’t be adding many times in the Stack queue, we check at each iteration if the name of the child node already exists in parent path name.
+
+</br>
+
+``` cs
+ // DFS Algorithm
+ public Stack<Path> Dfs(Node root)
+ {
+   if (root == null) return null;
+   bool isGaol = false;
+   //path queue
+   var queue = new Stack<Path>();
+   root.State = VisitState.Visited;
+
+   queue.Push(new Path(root));
+   while (queue.Any() && !isGaol)
+   {
+     Path p = queue.Pop();
+     foreach (NodeCostPair child in p.Nodes.Last().Children)
+     {
+         if (!p.Name.Contains(child.node.Name))
+         {   
+             Path childPath = new Path();
+             childPath.Nodes.AddRange(p.Nodes);
+             childPath.Nodes.Add(child.node);
+             queue.Push(childPath);
+
+             if (child.node.Name == "G")
+             {
+                 isGaol = true;
+                 break;
+             }
+         }
+     }}
+   return queue;}
+```  
+
+
+</br>
+
+## Breadth-first search algorithm
+
+![](/media/search-algorithms-in-ai-part1-blind-searches/bfs_algorithm.png)
+
+Unlike DFS, BFS algorithm adds in each loop the children at the end of the Queue. This time, we are going to create a method that returns a generic collection diffrent from DFS called Queue<Path>. This represents a variable size first-in-first-out (FIFO) collection of instances of type Path. In the other hand, the DFS method receives also the root node as a parameter but it returns a collection as a Queue object which contains all the paths explored by the algorithm as well as the Goal path which is the first element of the queue.
+
+
+``` cs
+  // BFS Algorithm
+  public Queue<Path> Bfs(Node root)
+    {
+        if (root == null) return null;
+        bool isGaol = false;
+        var queue = new Queue<Path>();
+        root.State = VisitState.Visited;
+        queue.Enqueue(new Path(root));
+        while (queue.Any() && !isGaol)
+        {  
+            Path p = queue.Dequeue();
+            foreach (NodeCostPair child in p.Nodes.Last().Children)
+            {
+                if (!p.Name.Contains(child.node.Name))
+                    {   
+                        Path childPath = new Path();
+                        childPath.Nodes.AddRange(p.Nodes);
+                        childPath.Nodes.Add(child.node);
+                        queue.Enqueue(childPath);
+                        if (child.node.Name == "G")
+                        {   
+                            isGaol = true;
+                            break;
+                        }
+                    }
+            }
+
+        }
+        return queue;
+   }
+```  
+
+</br>
 
 ## Conclusion
 
-Gatsby takes care of everything, cache, minification, lazy load your images, etc. I had to do some work to improve SEO, like hit areas and aria-labels in some buttons for better score. I'm very happy with the results of my site. I'll do my best to keep it updated. Please go and fork it, use it and build your own: https://github.com/aelhirach/aelhirach-blog-gatsby.
+In summary, a blind search is very flexible because it's blind to the problem it's trying to solve, we might just be looking for a solution and won’t know we’ve found it until we see it. That's why it's very useful when we don’t have any information we can use. However, this kind of algorithms doesn't show to be intelligent to solve complex search problems, it doesn't know anything special about the domain it's working in and so often makes mistakes. In the next tutorials we shall learn the two other categories of search algorithms that have information on the goal state which helps in more efficient searching.
