@@ -1,17 +1,14 @@
 ---
-title: 'Search Algorithms in AI : part 1 Blind Searches'
+title: 'Search Algorithms in AI : part 2 Heuristic Searches'
 tags: ["csharp"]
-published: true
-date: 2022-02-03T08:34:07.809Z
+published: false
+date: 2022-02-04T09:54:07.809Z
 featured: '/media/1cURajkPQj8eCtDHkWqasg.jpeg'
-imageAlt: 'Search Algorithms in AI : part 1 Blind Searches'
+imageAlt: 'Search Algorithms in AI : part 2 Heuristic Searches'
 ---
 
 
-In this tutorial series we are going to learn a branch of Artificial Intelligence called search algorithms. There are too many search algorithms out there to fit in one tutorial. Therefore, this tutorial series will instead discuss five of the fundamental search algorithms, divided into the following tree categories :
-- Blind searches : Depth First Search (DFS) & Breath First Search (BFS)  
-- Heuristic searches : BeamSearch & GreedySearch
-- Optimal searches : Branch and bound (BB)
+This tutorial series begin where [Part 1](/search-algorithms-in-ai-part1-blind-searches) left off. In this tutorial, we’ll set explain the second category of search algorithm .
 
 
 In the first tutorial we are going to explain two fundamental Blind searches Depth First Search (DFS) & Breath First Search (BFS). In the next tutorials, we will learn the two other categories of search algorithms, namely Heuristic & Optimal searches. A the end of this tutorial series, we will solve a maze game (labyrinth) with all those search algorithms. The code for this program can be found in its entirety in my github account, the link being here:- https://github.com/aelhirach/AIAlgorithms.
@@ -378,7 +375,7 @@ each a particular class or struct :
 
 Since the DFS algorithm adds in each loop the children at the beginning of the Queue, we are going to create a method that returns a generic collection called Stack<Path> which represents a variable size last-in-first-out (LIFO) collection of instances of type Path. The DFS method receives the root node as a parameter and returns at the end a queue as a Stack object which contains all the paths explored by the algorithm as well as the Goal path which exists at the beginning of the queue. To make sure that child paths won’t be adding many times in the Stack queue, we check at each iteration if the name of the child node already exists in parent path name.
 
-![](/media/search-algorithms-in-ai-part1-blind-searches/dfs_queue.png)
+
 
 </br>
 
@@ -426,7 +423,6 @@ Since the DFS algorithm adds in each loop the children at the beginning of the Q
 
 Unlike DFS, BFS algorithm adds in each loop the children at the end of the Queue. This time, we are going to create a method that returns a generic collection diffrent from DFS called Queue<Path>. This represents a variable size first-in-first-out (FIFO) collection of instances of type Path. In the other hand, the DFS method receives also the root node as a parameter but it returns a collection as a Queue object which contains all the paths explored by the algorithm as well as the Goal path which is the first element of the queue.
 
-![](/media/search-algorithms-in-ai-part1-blind-searches/bfs_queue.png)
 
 ``` cs
   // BFS Algorithm
