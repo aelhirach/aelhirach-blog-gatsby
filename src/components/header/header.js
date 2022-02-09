@@ -35,7 +35,7 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
                       <small style={{ marginBottom: '8px', padding: `.0rem` , color: 'white'}}>Web & Mobile Engineer</small>
 
 
-                      <TwitterFollowButton    options={{ 'showCount': false }} screenName={'a_elhirach'} />
+                      <TwitterFollowButton    options={{ 'showCount': false, size : "large" }} screenName={'a_elhirach'} />
 
 
                 </div>

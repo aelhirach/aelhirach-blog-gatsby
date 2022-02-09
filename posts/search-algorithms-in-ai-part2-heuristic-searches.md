@@ -1,7 +1,7 @@
 ---
 title: 'Search Algorithms in AI : part 2 Heuristic Searches'
 tags: ["csharp"]
-published: false
+published: true
 date: 2022-02-04T09:54:07.809Z
 featured: '/media/1cURajkPQj8eCtDHkWqasg.jpeg'
 imageAlt: 'Search Algorithms in AI : part 2 Heuristic Searches'
