@@ -13,6 +13,7 @@
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-emotion": "^4.5.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-gtag": "^4.7.0",
     "gatsby-plugin-image": "^2.5.2",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.12.1",
