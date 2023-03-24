@@ -184,7 +184,7 @@ each a particular class or struct :
 4. **\<Node\> class :** the methods and variables  of the Graph class are  :
     * **isRoot**, **isGoal**, **isTrap** : flags representing the type of the node.
     * **Children** : an array of NodeCostPair holding children associated to the current node with a given cost.
-    * **HhildrenCount** : represents the number of the children of the current node.
+    * **ChildrenCount** : represents the number of the children of the current node.
     * **HeuristicValue** : we will need this value in the heuristic searches : BeamSearch & GreedySearch.
 
 ``` cs
@@ -279,7 +279,7 @@ each a particular class or struct :
 
 5. **\<Path\> class :** the methods and variables  of the Graph class are  :
     * **Name** : concatenation of node names
-    * **AccumulatedCost** : the accumulatedCost.
+    * **AccumulatedCost** : the accumulated from the root node to the last node in the path.
     * **getRoot()** : as its name suggests, it allows to get the root node of the graph.
     * **HeuristicValue** : we will need this value in the heuristic searches : BeamSearch & GreedySearch.
 
@@ -441,26 +441,22 @@ Unlike DFS, BFS algorithm adds in each loop the children at the end of the Queue
         {  
             Path p = queue.Dequeue();
             foreach (NodeCostPair child in p.Nodes.Last().Children)
-            {
-                if (!p.Name.Contains(child.node.Name))
-                    {   
-                        Path childPath = new Path();
-                        childPath.Nodes.AddRange(p.Nodes);
-                        childPath.Nodes.Add(child.node);
-                        queue.Enqueue(childPath);
-                        if (child.node.Name == "G")
-                        {   
-                            isGaol = true;
-                            break;
-                        }
-                    }
+            {   
+                if(!p.Name.Contains(child.node.Name)){   
+                      Path childPath = new Path();
+                      childPath.Nodes.AddRange(p.Nodes);
+                      childPath.Nodes.Add(child.node);
+                      queue.Enqueue(childPath);
+                      if (child.node.Name == "G"){   
+                          isGaol = true;
+                          break;
+                      }
+                }
             }
-
         }
         return queue;
    }
-```  
-
+```
 </br>
 
 ## Conclusion

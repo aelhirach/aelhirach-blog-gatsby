@@ -56,7 +56,7 @@ const AboutPage = (props) => {
                         <h2 className="heading">About</h2>
                             <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Web & Mobile Apps Engineer. I'm originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
                                living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span>  since 2012, I'am also interested in Video streaming & TV production technologies,
-                               specially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations.
+                               especially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations.
                                Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span>. Finally, I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
                             </p>
                         <br />
