@@ -8,7 +8,7 @@ featured: '/media/1_JoEIzf1tDaaVq-mdGkB0uw.jpg'
 imageAlt: 'SpaceInvaders on Python3 and Tkinter'
 ---
 
-If you have learned pyhton basics and you want to put your skills into practice, this game tutorial is going to help you to achieve your goal in a quick and handy way.
+If you have learned python basics and you want to put your skills into practice, this game tutorial is going to help you to achieve your goal in a quick and handy way.
 
 
 In this tutorial, you’ll learn how to build a complete SpaceInvators game, including:
