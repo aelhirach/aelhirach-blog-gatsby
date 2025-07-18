@@ -54,13 +54,50 @@ const AboutPage = (props) => {
                     <SEO title="About" />
                     <div className="mt-3">
                         <h2 className="heading">About</h2>
-                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Web & Mobile Apps Engineer. I'm originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
-                               living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span>  since 2012, I'am also interested in Video streaming & TV production technologies,
+                            <p>I'm EL HIRACH ABDERRAZZAK, an IT industrial engineer (comparable to Master’s Degree in Computer Science), I'm working as Software Engineer for Belgian Radio-television of the French Community (RTBF). I'm originally from Morroco <span role="img" aria-label="sheep">🇲🇦</span> but have been
+                               living in the beautiful city of Brussels <span role="img" aria-label="sheep">🇧🇪</span> since 2012, I'am also interested in Video streaming & TV production technologies,
                                especially the A/V transcoding & professional codecs. I like also staying up to date about aeronautics digital technologies and crash investigations.
                                Sometimes I'am also cooking (to be accurate trying) and sometimes it turns out to be awesome <span role="img" aria-label="sheep">😋</span>. Finally, I'm a good football goalkeeper <span role="img" aria-label="sheep">🥅 ⚽</span> .
                             </p>
                         <br />
                         <h3>Skills</h3>
+                        <div>
+                            <span className="text-success d-inline" title="tags">
+                                <FaCheckCircle size={26} style={{ color: "success" }} />
+                            </span>
+                            <p className="d-inline ml-2 align-top">I'm a Java Spring Developer who enjoys building reliable and easy-to-use backend systems. I have experience working with Spring Boot to create web applications, REST APIs, and microservices. I focus on writing clean code that is easy to understand and maintain. : </p>
+                        </div>
+
+                        <br/>
+                        <div className="ml-5">
+                              <MyTechTag tag="java" tech="Java" name={tags["java"]} width={20} height={20} color="red" />
+                              <MyTechTag tag="kotlin" tech="Kotlin" name={tags["kotlin"]} width={20} height={20} color="deepskyblue" />
+                              <MyTechTag tag="spring" tech="Spring" name={tags["spring"]} width={20} height={20} color="#6DB33F" />
+                        </div>
+                        <ul className="list-group">
+
+                            <li className="d-inline-block ml-3 align-top">
+                            <span className="text-success d-inline-block" title="blazing">
+                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
+
+                            </span> <strong>Java :</strong> OOP, AOP &  DI Principles, Java APIs, Collections, Streams, IO, Multithreading & Concurrency, Log4j/Kibana, Maven. </li>
+                            <li className="d-inline-block ml-3 align-top">
+                            <span className="text-success d-inline-block" title="blazing">
+                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                            </span> <strong>Spring :</strong> Spring IoC, Spring boot, Hibernate, Spring Data JPA, Spring Security 6 (JWT, OUTH2, OpenID Connect, keycloak), Spring AOP/AspectJ, Spring MVC, HATEOAS, Lombok, Thymeleaf.
+                            </li>
+
+                            <li className="d-inline-block ml-3 align-top">
+                            <span className="text-success d-inline-block" title="blazing">
+                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                            </span> <strong>Architectural & Design Patterns :</strong> MVC, Serverless, Layers, Creational, (Singleton, Builder,...), Structural (Proxy,...), Behavioural (Observer, Strategy...).
+                            </li>
+                            <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" >
+                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                            </span> <strong>Micro-services architecture : </strong> Stack Spring Cloud Netflix (Eureka server, Gateway, LoadBalancer, Config Server, DiscoveryClient, Actuator) , HashiCorp Consul, Vault, Resilience4J,  RestTemplate, OpenFeign, Jersey.    
+                            </li>                       
+                        </ul>
+
                         <div>
                             <span className="text-success d-inline" title="tags">
                                 <FaCheckCircle size={26} style={{ color: "success" }} />
