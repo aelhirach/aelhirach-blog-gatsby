@@ -186,62 +186,61 @@ const AboutPage = (props) => {
                             <MyTechTag tag="teams" tech="Teams" name={tags["teams"]} width={20} height={20} color="skyblue" />
                             <MyTechTag tag="postgresql" tech="PostgreSQL" name={tags["postgresql"]} width={20} height={20} color="deepskyblue" />
                             <MyTechTag tag="firebase" tech="FireBase" name={tags["firebase"]} width={20} height={20} color="yellow" />
-                            <MyTechTag tag="apollo" tech="Apollo" name={tags["apollo"]} width={20} height={20} color="green" />
-                            <MyTechTag tag="artemis" tech="ActiveMQ Artemis" name={tags["artemis"]} width={20} height={20} color="#6C3483" />
+                            <MyTechTag tag="apollo" tech="Apollo" name={tags["apollo"]} width={20} height={20} color="#290ba0" />
+                            <MyTechTag tag="artemis" tech="ActiveMQ Artemis" name={tags["artemis"]} width={20} height={20} color="white" />
+                            <MyTechTag tag="neo4j" tech="Neo4j" name={tags["neo4j"]} width={20} height={20} color="#0088bb" />
+                            <MyTechTag tag="elasticsearch" tech="ElasticSearch" name={tags["elasticsearch"]} width={20} height={20} color="#fed10a" />
 
                         </div>
 
                         <ul className="list-group">
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  Data exchange : JSON, XML, Cookies, REST, SOAP, GraphQL, gRPC, Webhook,... 
+                        </span>  <strong>Data exchange : </strong> JSON, XML, Cookies, REST, SOAP, GraphQL, gRPC, Webhook,... 
                         </li>
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  Testing : JUnit, AssertJ, Mockito, Pac, Jest, Mocha, Cucumber, Selenium, Cypress.
+                        </span> <strong>Testing : </strong> Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts (JUnit, AssertJ, Mockito, Pac, Jest, Mocha, Cucumber, Selenium, Cypress.)
                         </li>
                         
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  I use Scrum project management methodology, git version control system and GitKraken Tool.
+                        </span> <strong>Project management :</strong> Agile (Scrum), Jira, Confluence, Slack, Teams, Outlook...
+
                         </li>
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span>  I use Scrum project management methodology, git version control system and GitKraken Tool.
+                        </span> <strong>CI/CD pipeline :</strong>  Gitlab CI/CD, Jetkins pipelines, SonarQube, TDD & BDD principles.
                         </li>
 
                         <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I'm familiar with Teams, Outlook and Slack channels.
+                        </span> <strong>Containerization and Virtualization :</strong> Developed and deployed containerized applications using Docker and orchestrated scalable services with Kubernetes in a cloud-native environment (rancher).
                         </li>
 
-                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
+                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I have a general proficiency of Unit testing, code coverage, reviewing, refactoring, continuous integration and code-smell concepts.
-                        </li>
-
-                        <li className="d-inline-block ml-3 align-top"><span className="text-success d-inline-block" title="blazing">
-                          <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I have a good knowledge of CRUD operations, interfacing with different layers of the development frame work and ORMs.
+                        </span><strong> SQL & NoSQL databases :</strong> I have a good experience with Oracle, MySQL, PostgreSQL, FireBase and SQLite Databases.
                         </li>
                         <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> I create SQL & NoSQL databases : Oracle, MySQL, PostgreSQL, FireBase and SQLite Database.
-                        </li>
-                        <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
-                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> Grpah Database : I integrated Neo4j into backend systems to manage interconnected data and developed efficient Cypher queries.
+                        </span> <strong>Grpah Database :</strong> I integrated Neo4j into backend systems to manage interconnected data and developed efficient Cypher queries.
                         </li>
                             <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> Appollo : Implemented Apollo Server as a Backend-for-Frontend (BFF) layer to aggregate and tailor GraphQL APIs for frontend needs, integrated with Apollo Client for efficient data fetching and caching.
+                        </span> <strong> Apollo : </strong> I maintained Apollo Server as a Backend-for-Frontend (BFF) layer to aggregate and tailor GraphQL APIs for frontend needs, integrated with Apollo Client for efficient data fetching and caching.
                         </li>
                         <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
                             <AiFillRightCircle size={18} style={{ color: "orange" }} />
-                        </span> ActiveMQ Artemis : Implemented reliable asynchronous messaging with Java JMS using ActiveMQ Artemis queues and topics for scalable service communication.
+                        </span> <strong>ActiveMQ Artemis :</strong> I maintained reliable asynchronous messaging with Java JMS using ActiveMQ Artemis queues and topics for scalable service communication.
                         </li>
+                         <li className="d-inline-block ml-3  align-top"><span className="text-success d-inline-block" title="blazing">
+                            <AiFillRightCircle size={18} style={{ color: "orange" }} />
+                        </span> <strong>Elastic Stack : </strong> Experienced in using the Elastic Stack (Logback, Logstash, Elasticsearch, Kibana) for centralized logging, real-time monitoring, and search analytics.
+                        </li>
+
                        
                         </ul>
 
@@ -331,20 +330,19 @@ const AboutPage = (props) => {
 
                             </span> <strong>Python :</strong> Experienced with Python packages such as Scikit-learn, Matplotlib, and NumPy for Data Science, Mathematics, and Statistics. </li>
 
-                            
+                            <li className="d-inline-block ml-3 align-top">
+                            <span className="text-success d-inline-block" title="blazing">
+                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
+
+                            </span> <strong>Engineering :</strong>  Image processing AR/VR, AI, Machine learning using many  languages : Python, C#, C & C++...</li>
+
                             <li className="d-inline-block ml-3 align-top">
                             <span className="text-success d-inline-block" title="blazing">
                                 <AiFillRightCircle size={18} style={{ color: "orange" }} />
 
                             </span> <strong>C# :</strong> Skilled in developing SOA Microsoft applications using C#, WCF, Windows Forms, and WPF.  </li>
                            
-    
-                            <li className="d-inline-block ml-3 align-top">
-                            <span className="text-success d-inline-block" title="blazing">
-                                <AiFillRightCircle size={18} style={{ color: "orange" }} />
-
-                            </span> <strong>React :</strong> Vite/Nextjs/Gatsby, Hooks, State Management (Redux, Context API) and Thunk, styled-Components, material-ui, i18next, Axios & Fetch.  </li>
-                            
+                  
                         </ul>
                     
                         
